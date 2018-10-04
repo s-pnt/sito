@@ -4,6 +4,14 @@
     <list default="true" id="6b6a7b8a-2d1a-4910-b353-7e362dc612e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/sito/static/css/sito.css" afterPath="$PROJECT_DIR$/sito/static/css/sito.css" />
       <change beforePath="$PROJECT_DIR$/sito/templates/sito/base.html" afterPath="$PROJECT_DIR$/sito/templates/sito/base.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html" afterPath="$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/linux_sidebar.html" afterPath="$PROJECT_DIR$/sito/templates/sito/linux_sidebar.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/python_installazione.html" afterPath="$PROJECT_DIR$/sito/templates/sito/python_installazione.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/python_introduzione.html" afterPath="$PROJECT_DIR$/sito/templates/sito/python_introduzione.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/python_liste.html" afterPath="$PROJECT_DIR$/sito/templates/sito/python_liste.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/python_sidebar.html" afterPath="$PROJECT_DIR$/sito/templates/sito/python_sidebar.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/python_stringhe.html" afterPath="$PROJECT_DIR$/sito/templates/sito/python_stringhe.html" />
+      <change beforePath="$PROJECT_DIR$/sito/templates/sito/python_variabili.html" afterPath="$PROJECT_DIR$/sito/templates/sito/python_variabili.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sito/templates/sito/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+            <state relative-caret-position="300">
+              <caret line="12" column="85" lean-forward="false" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
               <folding />
             </state>
           </provider>
@@ -34,21 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sito.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sito.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sito/static/css/sito.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-125">
-              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/miosito/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+            <state relative-caret-position="318">
+              <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -58,8 +56,20 @@
         <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_introduzione.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="45" />
+              <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="linux_introduzione.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,19 +78,19 @@
         <entry file="file://$PROJECT_DIR$/sito/templates/sito/linux_sidebar.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="3" column="91" lean-forward="false" selection-start-line="3" selection-start-column="91" selection-end-line="3" selection-end-column="91" />
+              <caret line="3" column="89" lean-forward="false" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
               <folding>
-                <element signature="e#256#263#0" expanded="true" />
+                <element signature="e#254#261#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linux_introduzione.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html">
+      <file leaf-file-name="python_stringhe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_stringhe.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -90,30 +100,18 @@
         <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_liste.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding>
-                <element signature="e#747#751#0" expanded="true" />
-                <element signature="e#763#767#0" expanded="true" />
-                <element signature="e#1095#1099#0" expanded="true" />
-                <element signature="e#1110#1114#0" expanded="true" />
-                <element signature="e#1377#1381#0" expanded="true" />
-                <element signature="e#1393#1397#0" expanded="true" />
-                <element signature="e#4541#4545#0" expanded="true" />
-                <element signature="e#4550#4554#0" expanded="true" />
-                <element signature="e#4568#4572#0" expanded="true" />
-                <element signature="e#4578#4582#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="python_sidebar.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_sidebar.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="91" lean-forward="false" selection-start-line="3" selection-start-column="91" selection-end-line="3" selection-end-column="91" />
-              <folding>
-                <element signature="e#256#263#0" expanded="true" />
+                <element signature="e#745#749#0" expanded="true" />
+                <element signature="e#761#765#0" expanded="true" />
+                <element signature="e#1093#1097#0" expanded="true" />
+                <element signature="e#1108#1112#0" expanded="true" />
+                <element signature="e#1375#1379#0" expanded="true" />
+                <element signature="e#1391#1395#0" expanded="true" />
+                <element signature="e#4539#4543#0" expanded="true" />
+                <element signature="e#4548#4552#0" expanded="true" />
+                <element signature="e#4566#4570#0" expanded="true" />
+                <element signature="e#4576#4580#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,8 +121,20 @@
         <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_installazione.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="python_sidebar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_sidebar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="89" lean-forward="false" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
+              <folding>
+                <element signature="e#254#261#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,6 +167,9 @@
         <option value="$PROJECT_DIR$/sito/templates/sito/python_stringhe.py" />
         <option value="$PROJECT_DIR$/sito/urls.py" />
         <option value="$PROJECT_DIR$/sito/views.py" />
+        <option value="$PROJECT_DIR$/miosito/settings.py" />
+        <option value="$PROJECT_DIR$/sito/templates/sito/base.html" />
+        <option value="$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/python_variabili.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/python_stringhe.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/python_sidebar.html" />
@@ -164,10 +177,7 @@
         <option value="$PROJECT_DIR$/sito/templates/sito/python_introduzione.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/python_installazione.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/linux_sidebar.html" />
-        <option value="$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html" />
-        <option value="$PROJECT_DIR$/miosito/settings.py" />
         <option value="$PROJECT_DIR$/sito/static/css/sito.css" />
-        <option value="$PROJECT_DIR$/sito/templates/sito/base.html" />
       </list>
     </option>
   </component>
@@ -357,7 +367,7 @@
         <state relative-caret-position="75">
           <caret line="3" column="91" lean-forward="false" selection-start-line="3" selection-start-column="91" selection-end-line="3" selection-end-column="91" />
           <folding>
-            <element signature="e#256#263#0" expanded="true" />
+            <element signature="e#254#261#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -366,7 +376,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -375,16 +387,16 @@
         <state relative-caret-position="75">
           <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
           <folding>
-            <element signature="e#747#751#0" expanded="true" />
-            <element signature="e#763#767#0" expanded="true" />
-            <element signature="e#1095#1099#0" expanded="true" />
-            <element signature="e#1110#1114#0" expanded="true" />
-            <element signature="e#1377#1381#0" expanded="true" />
-            <element signature="e#1393#1397#0" expanded="true" />
-            <element signature="e#4541#4545#0" expanded="true" />
-            <element signature="e#4550#4554#0" expanded="true" />
-            <element signature="e#4568#4572#0" expanded="true" />
-            <element signature="e#4578#4582#0" expanded="true" />
+            <element signature="e#745#749#0" expanded="true" />
+            <element signature="e#761#765#0" expanded="true" />
+            <element signature="e#1093#1097#0" expanded="true" />
+            <element signature="e#1108#1112#0" expanded="true" />
+            <element signature="e#1375#1379#0" expanded="true" />
+            <element signature="e#1391#1395#0" expanded="true" />
+            <element signature="e#4539#4543#0" expanded="true" />
+            <element signature="e#4548#4552#0" expanded="true" />
+            <element signature="e#4566#4570#0" expanded="true" />
+            <element signature="e#4576#4580#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -394,7 +406,7 @@
         <state relative-caret-position="75">
           <caret line="3" column="91" lean-forward="false" selection-start-line="3" selection-start-column="91" selection-end-line="3" selection-end-column="91" />
           <folding>
-            <element signature="e#256#263#0" expanded="true" />
+            <element signature="e#254#261#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -465,6 +477,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3050">
           <caret line="122" column="18" lean-forward="false" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -487,6 +500,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1825">
           <caret line="73" column="19" lean-forward="false" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -596,25 +610,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/miosito/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_variabili.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="44" lean-forward="true" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_stringhe.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="43" lean-forward="true" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="45" />
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="89" lean-forward="false" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
+          <folding>
+            <element signature="e#254#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_liste.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding>
+            <element signature="e#745#749#0" expanded="true" />
+            <element signature="e#761#765#0" expanded="true" />
+            <element signature="e#1093#1097#0" expanded="true" />
+            <element signature="e#1108#1112#0" expanded="true" />
+            <element signature="e#1375#1379#0" expanded="true" />
+            <element signature="e#1391#1395#0" expanded="true" />
+            <element signature="e#4539#4543#0" expanded="true" />
+            <element signature="e#4548#4552#0" expanded="true" />
+            <element signature="e#4566#4570#0" expanded="true" />
+            <element signature="e#4576#4580#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_introduzione.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_installazione.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sito/templates/sito/linux_sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="89" lean-forward="false" selection-start-line="3" selection-start-column="89" selection-end-line="3" selection-end-column="89" />
+          <folding>
+            <element signature="e#254#261#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -626,81 +697,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_sidebar.html">
+    <entry file="file://$PROJECT_DIR$/sito/templates/sito/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="91" lean-forward="false" selection-start-line="3" selection-start-column="91" selection-end-line="3" selection-end-column="91" />
-          <folding>
-            <element signature="e#256#263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_liste.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding>
-            <element signature="e#747#751#0" expanded="true" />
-            <element signature="e#763#767#0" expanded="true" />
-            <element signature="e#1095#1099#0" expanded="true" />
-            <element signature="e#1110#1114#0" expanded="true" />
-            <element signature="e#1377#1381#0" expanded="true" />
-            <element signature="e#1393#1397#0" expanded="true" />
-            <element signature="e#4541#4545#0" expanded="true" />
-            <element signature="e#4550#4554#0" expanded="true" />
-            <element signature="e#4568#4572#0" expanded="true" />
-            <element signature="e#4578#4582#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sito/templates/sito/python_introduzione.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="40" lean-forward="false" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="45" />
+        <state relative-caret-position="300">
+          <caret line="12" column="85" lean-forward="false" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sito/templates/sito/linux_sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="91" lean-forward="false" selection-start-line="3" selection-start-column="91" selection-end-line="3" selection-end-column="91" />
-          <folding>
-            <element signature="e#256#263#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/miosito/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="36" column="26" lean-forward="true" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sito/static/css/sito.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sito/templates/sito/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        <state relative-caret-position="318">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding />
         </state>
       </provider>
