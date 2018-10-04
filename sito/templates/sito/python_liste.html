@@ -1,0 +1,141 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:193.5px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Liste</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p>
+In questo capitolo vedremo le liste, iniziamo come al solito a crearne una nella shell di Python:
+</p>
+<pre>
+>>> città = ['Milano', 'Napoli', 'Torino', 'Roma', 'Palermo']
+</pre>
+<p>
+Questa è la nostra lista, proviamo a stamparla e vedere di che tipo è:
+</p>
+<pre>
+>>> print(città)
+['Milano', 'Napoli', 'Torino', 'Roma', 'Palermo']
+>>> print(type(città))
+&lt;class 'list'&gt;
+</pre>
+<p>
+Python ovviamente ci suggerisce che questa è una lista ma se osserviamo bene non è altro che una lista di stringhe. Proviamo ad accedere ai vari elementi della lista tramite l'indice, come abbiamo fatto con le stringhe, per vedere di che tipo è l'elemento "Napoli", per esempio:
+</p>
+<pre>
+>>> print(type(città[1]))
+&lt;class 'str'&gt;
+</pre>
+<p>
+Infatti ci dice che è una stringa. Ma una lista può contenere solo stringhe?
+</p>
+<pre>
+>>> città_numeri = ['Roma', 512, 'Catania', 'Milano', -12.6, 0]
+>>> print(città_numeri)
+['Roma', 512, 'Catania', 'Milano', -12.6, 0]
+>>> print(type(città_numeri))
+&lt;class 'list'&gt;
+</pre>
+<p>
+Abbiamo creato un'altra lista ma stavolta contenente stringhe, numeri positivi, negativi, interi e non. Quindi una lista può contenere diversi tipi di dati. Ora vediamo se possiamo usare i metodi utilizzati in precedenza sulle stringhe anche sulle liste:
+</p>
+<pre>
+>>> print(città_numeri[2])
+Catania
+>>> print(città_numeri[-1])
+0
+>>> print(città_numeri[3:])
+['Milano', -12.6, 0]
+>>> print(len(città_numeri))
+6
+</pre>
+<p>
+Questo è un altro esempio di flessibilità di Python, abbiamo usato il metodo di affettamento sia sulle liste che sulle stringhe. A proposito di flessibilità, cosa succede se proviamo a costruire una "lista di liste"? Proviamo a crearne una di esempio su cui fare qualche prova:
+</p>
+<pre id="shell">
+>>> persona = [['Ste', 'Pinto'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
+>>> print(persona)
+[['Ste', 'Pinto'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
+</pre>
+<p>
+La lista <code>persona</code> che abbiamo appena creato contiene a sua volta delle liste, avremmo ottenuto la stessa struttura di dati dichiarandola come segue:
+</p>
+<pre>
+>>> persona = [['Ste', 'Pinto'],
+...            ['Corso Garibaldi, 21', 'Milano', 10100],
+...            ['Celibe', 'Impiegato']]
+</pre>
+<p>
+Così è più facile realizzare che abbiamo appena creato una matrice, con tre righe contenenti a loro volta due o più elementi, una struttura dati di questo tipo:
+</p>
+<table class="table table-responsive-sm table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Indice</th>
+        <th scope="col">0</th>
+        <th scope="col">1</th>
+        <th scope="col">2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>0</td>
+        <td>Ste</td>
+        <td>Pinto</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Corso Garibaldi, 21</td>
+        <td>Milano</td>
+        <td>10100</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Celibe</td>
+        <td>Impiegato</td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+<p>
+L'utilizzo delle matrici nei più svariati ambiti dell'informatica è massiccio, basti pensare che tutte le immagini digitali non sono altro che matrici contenenti numeri per indicare il colore di ogni pixel. Inoltre ogniqualvolta si ha a che fare con una grossa quantità di dati, al fine dell'analisi o della visualizzazione in grafi o tabelle, sarà necessario raccoglierli e organizzarli dentro a delle matrici. Ora vediamo come accedere ai vari elementi:
+</p>
+<pre>
+>>> print(persona[0])
+['Ste', 'Pinto']
+>>> print(persona[0:])
+[['Ste', 'Pinto'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
+>>> print(persona[0][0])
+Ste
+>>> print(persona[0][1])
+Pinto
+>>> print(persona[1][0])
+Corso Garibaldi, 21
+>>> print(persona[2][1])
+Impiegato
+>>>
+</pre>
+<p>
+Prendiamo come riferimento la tabella poco sopra che rappresenta la nostra matrice e l'ultima riga, <code>print(persona[2][1])</code>, stiamo chiedendo a Python di mostrarci l'elemento della riga 2 e colonna 1. Che succede invece se richiediamo un elemento che non c'è? Proviamo!
+</p>
+<pre>
+>>> persona[2][3]
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range
+>>>
+</pre>
+<p>
+L'ultima riga parla chiaro, Python ci dice che c'è un errore di indice e che l'indice della lista è fuori dal range.<br>
+Vedremo più avanti come gestire gli errori, per intanto si rende utile il metodo <code>len</code> che abbiamo usato prima sia sulle liste che sulle stringhe, che ci permette di accedere a tutti gli elementi senza ottenere errori di questo tipo.
+        </p>
+    </div>
+</div>
+{% endblock %}

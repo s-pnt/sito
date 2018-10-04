@@ -1,0 +1,71 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:193.5px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Variabili</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p>
+Apriamo la riga di comando e digitiamo python (in caso di Windows) o python3 (in caso di Linux/Mac), il simbolo >>> ci indica che la shell interattiva di Python è pronta a ricevere istruzioni, in questo modo possiamo interagire con Python riga per riga, senza preoccuparci di scrivere un intero programma e poi eseguirlo, ma limitandoci ad osservarne il comportamento ad ogni riga di codice che andremo a inserire.<br>
+Iniziamo a farci un'idea di cosa sono e come funzionano le variabili in Python.<br>
+Dichiariamo una variabile di nome x e assegnamole un valore di dieci. Per questo esempio abbiamo usato il nome x ma avremmo potuto usare qualunque nome, una convenzione che si usa nella scelta dei nomi delle variabili è che sia esplicativo rispetto alla funzione della variabile stessa, ad esempio in questo caso avremmo potuto chiamare la variabile numero in quanto la inizializziamo ad un valore numerico, comunque teniamo x e andiamo avanti:
+        </p>
+        <pre>
+>>> x = 10</pre>
+        <p>
+Facile, no? Ora se vogliamo vedere il valore di x sarà sufficiente usare la funzione print, in questo modo:
+        </p>
+        <pre>
+>>> print(x)
+10</pre>
+        <p>
+Ora, per curiosità, proviamo a vedere di che tipo è la variabile x che abbiamo appena creato, noi abbiamo indicato solo un valore (10) ma non abbiamo detto a Python se fosse un intero, una stringa di testo o un altro tipo di dato. Per visualizzare il tipo di dato sarà sufficiente usare la funzione type già presente in Python, e ne visualizzeremo l'output grazie a print:
+        </p>
+        <pre>
+>>> print(type(x))
+&lt;class 'int'&gt;</pre>
+        <p>
+Stiamo dicendo letteralmente a Python: stampami il tipo di x.
+Per ora tralasciamo il class iniziale, subito dopo leggiamo 'int', cioè intero, esattamente il tipo di numero che abbiamo inserito.
+Potrebbe sembrare un comportamento normale ma in altri linguaggi di programmazione la semplice dichiarazione e inizializzazione di una variabile non è così immediata, richiede una maggiore quantità di righe di codice, che di conseguenza si traduce in più errori e maggiore difficoltà di manutenzione e lettura dell'intero codice.
+Ma andiamo avanti, proviamo a fregare Python!
+        </p>
+        <pre>
+>>> x = x + 0.25</pre>
+        <p>
+Qui stiamo chiedendo a Python di aggiornare la variabile x e di farla diventare uguale a x + 0.25.
+Visualizziamo la variabile x:
+        </p>
+        <pre>
+>>> print(x)
+10.25</pre>
+        <p>
+Ma come? Era un intero, ora ha la virgola! Verifichiamo il tipo di x:
+        </p>
+        <pre>
+>>> print(type(x))
+&lt;class 'float'&gt;</pre>
+        <p>
+Ci ha fregati Python, la variabile x è diventata un float, cioè un numero a virgola mobile. Giochiamo ancora un pò con le variabili:
+        </p>
+        <pre>
+>>> x = 'ciao mondo!'
+>>> print(x)
+ciao mondo!</pre>
+        <p>
+Come abbiamo creato una variabile numerica intera, l'abbiamo modificata in una di tipo testuale, vediamo di che tipo:
+        </p>
+        <pre>
+>>> print(type(x))
+&lt;class 'str'&gt;</pre>
+        <p>
+Ora è di tipo 'str', cioè stringa. Questa flessibilità non è una cosa comune a tutti i linguaggi di programmazione ma è un'arma a doppio taglio, da un lato ci permette di lavorare su diversi tipi di dati senza preoccuparci di scomode dichiarazioni e conversioni, dall'altro ci mette in una posizione in cui dobbiamo controllare i dati che vengono inseriti, per esempio se stiamo lavorando sul software di contabilità di un'azienda, dovremmo preoccuparci che non vengano inserite lettere o simboli quando ci aspettiamo degli importi, per evitare problemi di funzionamento del programma stesso o persino di corrompere i dati presenti nel sistema.
+        </p>
+    </div>
+</div>
+{% endblock %}

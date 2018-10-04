@@ -1,0 +1,38 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:193.5px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Installazione</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p><strong>Windows</strong></p>
+<a href="https://www.python.org/ftp/python/3.7.0/python-3.7.0.exe">Download Python 3.7</a>
+<br><br>
+<p><strong>Linux</strong></p>
+<p>Di solito su Linux è preinstallato in quanto parte delle funzionalità del sistema operativo stesso sono scritte in Python. Per verificare se Python è installato è sufficiente digitare python3 da riga di comando, se non fosse già installato sarà sufficiente digitare:</p>
+<pre>
+sudo apt-get install python3.7
+</pre>
+<br>
+<p><strong>Mac</strong></p>
+<p>Di solito anche su Mac, che è un sistema operativo basato su Linux, Python è preinstallato.</p>
+<p>Per verificarlo è sufficiente digitare python3 da riga di comando, altrimenti installare la versione appropriata tra le seguenti:
+</p>
+<p>Per Mac OS X 10.9 e successivi: <a href="https://www.python.org/ftp/python/3.7.0/python-3.7.0-macosx10.9.pkg">macOS 64-bit installer</a></p>
+<p>Per Mac OS X 10.6 e successivi: <a href="https://www.python.org/ftp/python/3.7.0/python-3.7.0-macosx10.6.pkg">macOS 64-bit/32-bit installer</a></p>
+<br><br>
+<p>Per verificare che l'installazione sia andata a buon fine è sufficiente aprire la shell dei comandi e digitare python in caso di Windows o python3 in caso di Linux/Mac. Dovremmo ricevere un output simile al seguente:</p>
+<pre>
+Python 3.7.0 (v3.7.0, Jun 27 2018, 04:06:47) [MSC v.1914 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+</pre>
+        <p>A questo punto consiglio di installare un IDE, cioè un comodo editor con interfaccia grafica, nato per progetti in Python, in quanto ci agevolerà nel lavoro con funzioni di autocompletamento, autoindentazione, ci segnalerà errori e altre utili funzioni. L'IDLE che viene installato insieme a Python è già un ottimo strumento, io per preferenza personale consiglio <a href="https://download-cf.jetbrains.com/python/pycharm-community-2018.2.4.exe">PyCharm Community Edition</a>, è free, veloce, funziona su Windows, Mac e Linux ed è adatto a diversi tipi di progetti.</p>
+    </div>
+</div>
+{% endblock %}

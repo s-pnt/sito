@@ -1,0 +1,37 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:193.5px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Introduzione</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p>
+Python è un linguaggio di programmazione che sta diventando sempre più popolare in contesti diversi e per molteplici motivi.<br>
+Il motivo principale del suo successo è senza dubbio la semplicità della sintassi, Python ci permette di scrivere meno codice e più leggibile per ottenere lo stesso risultato che in altri linguaggi richiederebbe più codice e più tempo, anche in prospettiva di future modifiche al codice stesso.<br>
+Vediamo un esempio introduttivo coinvolgendo subito Python, in seguito vedremo come installarlo:
+        </p>
+        <pre>
+numeri = [2, 4, 6, 8]
+prodotto = 1
+for numero in numeri:
+    prodotto = prodotto * numero
+print(prodotto)</pre>
+        <p>
+Ora non ci interessa entrare nel dettaglio di ogni singola istruzione ma solo avere una panoramica introduttiva sui concetti fondamentali dietro alla programmazione, tutti questi temi verranno approfonditi in seguito nelle relative sezioni.<br>
+            Nelle prime due righe creiamo due variabili, <code>numeri</code> e <code>prodotto</code>. Alla variabile <code>numeri</code> assegnamo una lista di numeri (2, 4, 6, 8) e invece alla variabile <code>prodotto</code> assegnamo il valore 1.<br>
+La riga seguente inizia con <code>for</code>, indica un ciclo, vuol dire che Python eseguirà più volte la stessa parte di codice racchiusa nel ciclo.<br>
+Proviamo semplicemente a tradurla dall'inglese: per <code>numero</code> in <code>numeri</code>, ossia per ogni numero nella lista numeri (2, 4, 6, 8).<br>
+In questo caso ad ogni passaggio nel ciclo, <code>numero</code> sarà uguale agli elementi presenti nella lista <code>numeri</code>, quindi al primo passaggio sarà uguale a 2, poi a 4, a 6 e infine a 8.<br>
+Non ha importanza capire ora come funziona esattamente un ciclo <code>for</code>, verrà approfondito più avanti (sezione Cicli) ma solo farsi un'idea della sintassi di Python.<br>
+Nella riga successiva (<code>prodotto = prodotto * numero</code>) stiamo cambiando la variabile <code>prodotto</code>, inizialmente uguale a uno, e la moltiplichiamo per il <code>numero</code> in ogni ciclo, quindi ad ogni passaggio <code>prodotto</code> verrà moltiplicato per i numeri presenti nella lista (2, 4, 6 e 8, in questo esempio).<br>
+Alla fine <code>print</code> indica a Python di "stampare" (mostrare a schermo) il testo tra parentesi, in questo caso il prodotto che abbiamo ottenuto grazie al ciclo precedente.<br>
+Abbiamo appena visto come grazie a Python e cinque semplici righe di codice possiamo già fare un primo piccolo programma di esempio, coinvolgendo molti aspetti della programmazione, dalla dichiarazione e inizializzazione delle variabili (<code>numeri</code> e <code>prodotto</code>), alle liste (in questo caso la lista numerica 2, 4, 6 e 8), ai cicli <code>for</code> per iterare sugli elementi di una lista, l'aggiornamento di variabili (<code>prodotto = prodotto * numero</code>) e la visualizzazione su schermo grazie a <code>print</code>.
+        </p>
+    </div>
+</div>
+{% endblock %}

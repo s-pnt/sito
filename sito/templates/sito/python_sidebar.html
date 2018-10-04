@@ -1,0 +1,23 @@
+{% extends 'sito/base.html' %}
+
+{% block sidebar %}
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:193.5px" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Chiudi &times;</button>
+    <a href="{% url 'python_introduzione' %}" class="w3-bar-item w3-button" {% if "/python/introduzione/" == request.path %}id="attivo"{% endif %}>Introduzione</a>
+    <a href="{% url 'python_installazione' %}" class="w3-bar-item w3-button" {% if "/python/installazione/" == request.path %}id="attivo"{% endif %}>Installazione</a>
+    <a href="{% url 'python_variabili' %}" class="w3-bar-item w3-button" {% if "/python/variabili/" == request.path %}id="attivo"{% endif %}>Variabili</a>
+    <a href="{% url 'python_stringhe' %}" class="w3-bar-item w3-button" {% if "/python/stringhe/" == request.path %}id="attivo"{% endif %}>Stringhe</a>
+    <a href="{% url 'python_liste' %}" class="w3-bar-item w3-button" {% if "/python/liste/" == request.path %}id="attivo"{% endif %}>Liste</a>
+</div>
+
+{% block content%}{% endblock %}
+
+<script>
+function w3_open() {
+document.getElementById("mySidebar").style.display = "block";
+}
+function w3_close() {
+document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+{% endblock %}

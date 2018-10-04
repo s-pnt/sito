@@ -1,0 +1,134 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:193.5px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Stringhe</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p>
+        Prima di dare una definizione di stringa vediamo come crearne una in Python, sempre dalla nostra shell interattiva:
+    </p>
+    <pre>
+>>> testo = 'Io sono una stringa!'
+</pre>
+    <p>
+        La variabile <code>testo</code> appena creata è di tipo stringa e contiene le lettere racchiuse tra gli apostrofi, avremmo ottenuto lo stesso risultato così:
+    </p>
+    <pre>
+>>> testo = "Anch'io sono una stringa!"
+</pre>
+    <p>
+        In quest'ultima stringa avevo la necessità di usare l'apostrofo, così ho usato le virgolette per dichiarare la mia stringa. Andiamo avanti:
+    </p>
+    <pre>
+>>> testo = """
+... Ciao, io sono una stringa multiriga
+... e posso andare a capo quanto voglio!
+... """
+</pre>
+    <p>
+        Quest'ultima stringa è sufficientemente autoesplicativa, anche qui avremmo potuto usare tre apostrofi piuttosto che tre virgolette, sia all'inizio che alla fine della stringa.
+        <br>
+        Le stringhe non sono altro che una lista ordinata di elementi, che possono essere lettere, numeri e simboli.
+        Cerchiamo di capire meglio cosa significa:
+    </p>
+    <pre>
+>>> prova = 'ciao, mondo'
+</pre>
+    <p>
+        In questo modo abbiamo creato una stringa di nome "prova" che può essere vista come un contenitore in cui le lettere sono ordinate da un indice che parte da zero, come segue:
+    </p>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">0</th>
+            <th scope="col">1</th>
+            <th scope="col">2</th>
+            <th scope="col">3</th>
+            <th scope="col">4</th>
+            <th scope="col">5</th>
+            <th scope="col">6</th>
+            <th scope="col">7</th>
+            <th scope="col">8</th>
+            <th scope="col">9</th>
+            <th scope="col">10</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>c</td>
+            <td>i</td>
+            <td>a</td>
+            <td>o</td>
+            <td>,</td>
+            <td> </td>
+            <td>m</td>
+            <td>o</td>
+            <td>n</td>
+            <td>d</td>
+            <td>o</td>
+        </tr>
+        </tbody>
+    </table>
+    <p>
+        Vediamo in che modo ci può servire conoscere meglio la nostra stringa, digitiamo quanto segue:
+    </p>
+    <pre>
+>>> print(prova[3])
+o
+</pre>
+    <p>
+        Stiamo dicendo a Python di mostrarci l'elemento 3 (non il terzo elemento in quanto l'indice parte da zero) e infatti ci mostra una <code>o</code>, andiamo avanti:
+    </p>
+    <pre>
+>>> print(prova[0:4])
+ciao
+</pre>
+    <p>
+        Qui stiamo chiedendo a Python di mostrarci i 4 elementi a partire dall'indice zero (la prima lettera), vediamo che ci restituisce <code>ciao</code>, avremmo potuto scrivere allo stesso modo:
+    </p>
+    <pre>
+>>> print(prova[:4])
+ciao
+</pre>
+    <p>
+        In quanto non specificando il primo valore intendiamo dall'inizio, quindi dal valore zero. E' altrettanto vero l'opposto:
+    </p>
+    <pre>
+>>> print(prova[6:])
+mondo
+</pre>
+    <p>
+        Cioè se non specifichiamo l'ultimo valore Python ci restituirà tutta la stringa a partire dal primo valore, in questo caso 6, infatti possiamo vedere che ci restituisce <code>mondo</code>. Per accedere alla stringa a partire dagli ultimi elementi sarà sufficiente digitare quanto segue:
+    </p>
+    <pre>
+>>> print(prova[-1])
+o
+>>> print(prova[-2])
+d
+>>> print(prova[-3])
+n
+</pre>
+    <p>
+        Per vedere l'ultimo elemento, -2 per il penultimo e così via.
+        <br>
+        Un'informazione importante quando si ha a che fare con le stringhe è conoscerne la lunghezza, in Python c'è già un modulo che ci viene in aiuto e si chiama <code>len</code> (sta per length, lunghezza) e lo possiamo usare così:
+    </p>
+    <pre>
+>>> print(len(prova))
+11
+</pre>
+    <p>
+        Capiremo l'utilità di queste tecniche di manipolazione dei dati come l'affettamento o l'indicizzazione ( <code>stringa[i]</code> ) quando ci troveremo a lavorare sui nostri primi progetti, non è necessario ricordarsi tutto a memoria, l'importante è avere una panoramica chiara degli strumenti che abbiamo a disposizione, in modo da poterli cercare ed usare all'occorrenza.
+        <br>
+        Ora che abbiamo confidenza con le stringhe passiamo alle liste, non sono poi tanto diverse in quanto abbiamo definito le stringhe come liste ordinate di elementi.
+
+        </p>
+    </div>
+</div>
+{% endblock %}
