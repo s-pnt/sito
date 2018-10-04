@@ -8,6 +8,7 @@
     <a href="{% url 'python_variabili' %}" class="w3-bar-item w3-button" {% if "/python/variabili/" == request.path %}id="attivo"{% endif %}>Variabili</a>
     <a href="{% url 'python_stringhe' %}" class="w3-bar-item w3-button" {% if "/python/stringhe/" == request.path %}id="attivo"{% endif %}>Stringhe</a>
     <a href="{% url 'python_liste' %}" class="w3-bar-item w3-button" {% if "/python/liste/" == request.path %}id="attivo"{% endif %}>Liste</a>
+    <a href="{% url 'python_tuple' %}" class="w3-bar-item w3-button" {% if "/python/tuple/" == request.path %}id="attivo"{% endif %}>Tuple</a>
 </div>
 
 {% block content%}{% endblock %}

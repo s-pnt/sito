@@ -30,6 +30,11 @@ def python_liste(request):
                   'sito/python_liste.html',
                   {})
 
+def python_tuple(request):
+    return render(request,
+                  'sito/python_tuple.html',
+                  {})
+
 def linux_introduzione(request):
     return render(request,
                   'sito/linux_introduzione.html',

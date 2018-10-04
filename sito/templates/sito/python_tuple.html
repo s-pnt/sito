@@ -1,0 +1,68 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:194px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Tuple</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+<pre>
+tupla = ('le', 'tuple', 'sono', 'immutabili')
+</pre>
+<p>
+Definizione: una tupla è una lista immutabile.<br>
+Le tuple hanno molti contesti di utilizzo, in primo luogo sono più veloci delle liste. Inoltre è buona norma usarle quando abbiamo la certezza che i nostri dati non devono cambiare in quanto, essendo immutabili, non potremo modificarle nemmeno per sbaglio.<br>
+Vediamo ora come funzionano:
+</p>
+<pre>
+>>> tupla = ('le', 'tuple', 'sono', 'immutabili')
+>>> tupla[2]
+'sono'
+>>> tupla[-1]
+'immutabili'
+>>> tupla[1:4]
+('tuple', 'sono', 'immutabili')
+</pre>
+<p>
+Come vediamo, i metodi di affettamento e indicizzazione funzionano anche con le tuple. Proviamo ora a modificare la nostra tupla:
+</p>
+<pre>
+>>> tupla[0] = 'non possono essere modificate!'
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment
+</pre>
+<p>
+Python è chiarissimo: la nostra <code>'tuple'</code> non può essere modificata.<br>
+Proviamo a modificarla in maniera diversa:
+</p>
+<pre>
+>>> tupla = ('prova', 'modifica')
+>>> tupla
+('prova', 'modifica')
+</pre>
+<p>
+Può sembrare che abbiamo modificato la nostra tupla ma se osserviamo bene in realtà non è rimasta traccia della tupla precedente <code>('le', 'tuple', 'sono', 'immutabili')</code>. In realtà ne abbiamo creata una nuova, andando a sovrascrivere la precedente. Grazie al metodo <code>id()</code> possiamo verificare quale parte della memoria occupa sul nostro computer la tupla:
+</p>
+<pre>
+>>> id(tupla)
+9531640
+</pre>
+<p>
+Ora proviamo a sovrascriverla come prima e vedere se occupa la stessa posizione di memoria o una nuova:
+</p>
+<pre>
+>>> tupla = ('nuova', 'tupla')
+>>> id(tupla)
+19540688
+</pre>
+<p>
+Abbiamo dimostrato che è stata creata una nuova tupla in quanto occupa una posizione diversa in memoria.
+</p>
+</div>
+</div>
+{% endblock %}
