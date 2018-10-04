@@ -98,3 +98,7 @@ code {
 .topnav #topnav-attivo {
     border-bottom: 1px solid #4CAF50;
 }
+
+#collapse-button {
+    font-style: italic;
+}
