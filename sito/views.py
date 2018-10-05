@@ -47,5 +47,5 @@ def linux_distribuzioni(request):
 
 def raspberrypi_introduzione(request):
     return render(request,
-                  'sito/python_introduzione.html',
+                  'sito/raspberrypi_introduzione.html',
                   {})
