@@ -23,7 +23,7 @@
 }
 
 .topnav #logo img {
-    width: 5.8vw;
+    width: 5.7vw;
 }
 
 /* Change the color of links on hover */
@@ -77,6 +77,7 @@
 
 .w3-container a:hover {
     color: #4CAF50;
+    color: #f2f2f2;
 }
 
 body {
@@ -117,10 +118,10 @@ code {
     }
 
     .w3-sidebar {
-        top: 8.9vw;
+        top: 8.85vw;
     }
 
     .w3-main {
-    margin-top: 8.9vw;
+    margin-top: 8.85vw;
     }
 }
