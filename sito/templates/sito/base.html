@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="topnav">
-    <a id="logo" href="/"><img src="/static/sito/logosito.png" width="89" height="60" onmouseover="this.src='/static/sito/logosito2.png';" onmouseout="this.src='/static/sito/logosito.png';"/></a>
+    <a id="logo" href="/"><img src="/static/sito/logosito.png" onmouseover="this.src='/static/sito/logosito2.png';" onmouseout="this.src='/static/sito/logosito.png';"/></a>
     <a {% if "/" == request.path %}class="active" id="topnav-attivo"{% endif %} href="/">Home</a>
     <a {% if "/python/" in request.path %}class="active" id="topnav-attivo"{% endif %} href="{% url 'python_introduzione' %}">Python</a>
     <a {% if "/linux/" in request.path %}class="active" id="topnav-attivo"{% endif %} href="{% url 'linux_introduzione' %}">Linux</a>
