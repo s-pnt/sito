@@ -106,21 +106,21 @@ code {
 /* Mobile phones */
 @media only screen and (max-width: 640px) {
     .topnav a {
-        padding: 1.2vw 2.2vw;
+        padding: 1.4vw 2vw;
         text-decoration: none;
-        font-size: 3.6vw;
+        font-size: 4.1vw;
         font-style: bold;
     }
 
     .topnav #logo img {
-        width: 10.35vw;
+        width: 12.1vw;
     }
 
     .w3-sidebar {
-        top: 7.6vw;
+        top: 8.9vw;
     }
 
     .w3-main {
-    margin-top: 7.6vw;
+    margin-top: 8.9vw;
     }
 }
