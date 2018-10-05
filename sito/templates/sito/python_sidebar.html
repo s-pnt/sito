@@ -1,7 +1,7 @@
 {% extends 'sito/base.html' %}
 
 {% block sidebar %}
-<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:185.5px" id="mySidebar">
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left" style="width:165px" id="mySidebar">
     <button id="collapse-button" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Chiudi &times;</button>
     <a href="{% url 'python_introduzione' %}" class="w3-bar-item w3-button" {% if "/python/introduzione/" == request.path %}id="attivo"{% endif %}>Introduzione</a>
     <a href="{% url 'python_installazione' %}" class="w3-bar-item w3-button" {% if "/python/installazione/" == request.path %}id="attivo"{% endif %}>Installazione</a>

@@ -14,7 +14,7 @@
     text-align: center;
     padding: 1.2vw 1.9vw;
     text-decoration: none;
-    font-size: 2.2vw;
+    font-size: 1.4vw;
 }
 
 .topnav #logo {
@@ -23,7 +23,7 @@
 }
 
 .topnav #logo img {
-    width: 7.5vw;
+    width: 5.8vw;
 }
 
 /* Change the color of links on hover */
@@ -54,7 +54,7 @@
 .w3-sidebar {
     background-color: #333;
     color: #f2f2f2;
-    top: 5.7vw;
+    top: 4.5vw;
 }
 
 .w3-sidebar a:hover {
@@ -62,7 +62,7 @@
 }
 
 .w3-main {
-    margin-top: 5.7vw;
+    margin-top: 4.5vw;
 }
 
 .w3-sidebar #attivo {
@@ -101,4 +101,26 @@ code {
 
 #collapse-button {
     font-style: italic;
+}
+
+/* Mobile phones */
+@media only screen and (max-width: 640px) {
+    .topnav a {
+        padding: 1.2vw 2.2vw;
+        text-decoration: none;
+        font-size: 3.6vw;
+        font-style: bold;
+    }
+
+    .topnav #logo img {
+        width: 10.35vw;
+    }
+
+    .w3-sidebar {
+        top: 7.6vw;
+    }
+
+    .w3-main {
+    margin-top: 7.6vw;
+    }
 }
