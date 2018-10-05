@@ -12,14 +12,14 @@
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    padding: 10px 12px;
+    padding: .95vw 1.3vw;
     text-decoration: none;
     font-size: 2vw;
 }
 
 .topnav #logo {
-    padding-bottom: 3px;
-    padding-top: 3px;
+    padding-bottom: .3vw;
+    padding-top: .3vw;
 }
 
 .topnav #logo img {

@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6b6a7b8a-2d1a-4910-b353-7e362dc612e2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/sito/templates/sito/base.html" afterPath="$PROJECT_DIR$/sito/templates/sito/base.html" />
+      <change beforePath="$PROJECT_DIR$/sito/static/css/sito.css" afterPath="$PROJECT_DIR$/sito/static/css/sito.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -84,8 +84,8 @@
       <file leaf-file-name="sito.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sito/static/css/sito.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="18" />
+            <state relative-caret-position="168">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -151,7 +151,6 @@
         <option value="$PROJECT_DIR$/sito/templates/sito/python_stringhe.py" />
         <option value="$PROJECT_DIR$/sito/urls.py" />
         <option value="$PROJECT_DIR$/sito/views.py" />
-        <option value="$PROJECT_DIR$/sito/static/css/sito.css" />
         <option value="$PROJECT_DIR$/sito/templates/sito/python_sidebar.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/python_introduzione.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/python_installazione.html" />
@@ -162,6 +161,7 @@
         <option value="$PROJECT_DIR$/sito/templates/sito/linux_sidebar.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/linux_introduzione.html" />
         <option value="$PROJECT_DIR$/sito/templates/sito/base.html" />
+        <option value="$PROJECT_DIR$/sito/static/css/sito.css" />
         <option value="$PROJECT_DIR$/miosito/settings.py" />
       </list>
     </option>
@@ -188,8 +188,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,6 +242,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -595,7 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="45" lean-forward="false" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,18 +663,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sito/static/css/sito.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="78" column="17" lean-forward="false" selection-start-line="78" selection-start-column="11" selection-end-line="78" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sito/templates/sito/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
           <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sito/static/css/sito.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>
