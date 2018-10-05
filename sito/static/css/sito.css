@@ -12,20 +12,18 @@
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    padding: 6px 10px;
+    padding: 10px 12px;
     text-decoration: none;
     font-size: 2vw;
 }
 
 .topnav #logo {
-    padding-bottom: 3.5px;
-    padding-top: 3.5px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-bottom: 3px;
+    padding-top: 3px;
 }
 
 .topnav #logo img {
-    height: 48px;
+    width: 6.1vw;
 }
 
 /* Change the color of links on hover */
@@ -56,7 +54,7 @@
 .w3-sidebar {
     background-color: #333;
     color: #f2f2f2;
-    top: 50px;
+    top: 4.7vw;
 }
 
 .w3-sidebar a:hover {
@@ -64,7 +62,7 @@
 }
 
 .w3-main {
-    margin-top: 50px;
+    margin-top: 4.7vw;
 }
 
 .w3-sidebar #attivo {
