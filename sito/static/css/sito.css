@@ -12,14 +12,21 @@
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    padding: 8px 8px;
+    padding: 8px 10px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 2vw;
 }
 
 .topnav #logo {
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-bottom: 3.5px;
+    padding-top: 3.5px;
+    padding-left: .5px;
+    padding-right: .5px;
+}
+
+.topnav #logo img {
+    max-width: 73%;
+    height: auto;
 }
 
 /* Change the color of links on hover */
@@ -50,7 +57,7 @@
 .w3-sidebar {
     background-color: #333;
     color: #f2f2f2;
-    top: 37.5px;
+    top: 50px;
 }
 
 .w3-sidebar a:hover {
@@ -58,7 +65,7 @@
 }
 
 .w3-main {
-    margin-top: 29px;
+    margin-top: 50px;
 }
 
 .w3-sidebar #attivo {
