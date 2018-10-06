@@ -12,4 +12,5 @@ urlpatterns = [
     path('linux/introduzione/', views.linux_introduzione, name='linux_introduzione'),
     path('linux/distribuzioni/', views.linux_distribuzioni, name='linux_distribuzioni'),
     path('raspberrypi/introduzione/', views.raspberrypi_introduzione, name='raspberrypi_introduzione'),
+    path('prova/', views.prova, name='prova'),
 ]
