@@ -81,8 +81,9 @@
 }
 
 .w3-container img {
-    transition: transform .2s;
+    transition: transform .4s;
     max-width: 30vw;
+    margin: 0 auto;
 }
 
 .w3-container .image-right {
@@ -162,14 +163,14 @@ code {
 
 @media only screen and (min-width: 800px) {
     .w3-container img:hover {
-        transform: scale(2.1);
+        transform: scale(2.2);
     }
 
     .w3-container .image-right:hover {
-        padding-right: 85px;
+        padding-right: 95px;
     }
 
     .w3-container .image-left:hover {
-        padding-left: 85px;
+        padding-left: 95px;
     }
 }
