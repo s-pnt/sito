@@ -81,10 +81,11 @@
 }
 
 .w3-container img {
-    max-width: 25vw;
+    max-width: 28vw;
 }
 
 .w3-container .titolo-immagine {
+    margin-top: 15px;
     padding-top: 20px;
 }
 
