@@ -79,48 +79,48 @@
         Vediamo in che modo ci può servire conoscere meglio la nostra stringa, digitiamo quanto segue:
     </p>
     <pre>
->>> print(prova[3])
+>>> prova[3]
 o
 </pre>
     <p>
         Stiamo dicendo a Python di mostrarci l'elemento 3 (non il terzo elemento in quanto l'indice parte da zero) e infatti ci mostra una <code>o</code>, andiamo avanti:
     </p>
     <pre>
->>> print(prova[0:4])
+>>> prova[0:4]
 ciao
 </pre>
     <p>
         Qui stiamo chiedendo a Python di mostrarci i 4 elementi a partire dall'indice zero (la prima lettera), vediamo che ci restituisce <code>ciao</code>, avremmo potuto scrivere allo stesso modo:
     </p>
     <pre>
->>> print(prova[:4])
+>>> prova[:4]
 ciao
 </pre>
     <p>
         In quanto non specificando il primo valore intendiamo dall'inizio, quindi dal valore zero. E' altrettanto vero l'opposto:
     </p>
     <pre>
->>> print(prova[6:])
+>>> prova[6:]
 mondo
 </pre>
     <p>
         Cioè se non specifichiamo l'ultimo valore Python ci restituirà tutta la stringa a partire dal primo valore, in questo caso 6, infatti possiamo vedere che ci restituisce <code>mondo</code>. Per accedere alla stringa a partire dagli ultimi elementi sarà sufficiente digitare quanto segue:
     </p>
     <pre>
->>> print(prova[-1])
+>>> prova[-1]
 o
->>> print(prova[-2])
+>>> prova[-2]
 d
->>> print(prova[-3])
+>>> prova[-3]
 n
 </pre>
     <p>
-        Per vedere l'ultimo elemento, -2 per il penultimo e così via.
+        Quindi -1 per accede all'ultimo elemento, -2 per il penultimo e così via.
         <br>
-        Un'informazione importante quando si ha a che fare con le stringhe è conoscerne la lunghezza, in Python c'è già un modulo che ci viene in aiuto e si chiama <code>len</code> (sta per length, lunghezza) e lo possiamo usare così:
+        Un'informazione importante quando si ha a che fare con le stringhe è conoscerne la lunghezza, in Python c'è già un modulo che ci viene in aiuto ed è <code>len()</code> (sta per length, lunghezza) e lo possiamo usare così:
     </p>
     <pre>
->>> print(len(prova))
+>>> len(prova)
 11
 </pre>
     <p>

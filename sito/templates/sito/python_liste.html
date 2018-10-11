@@ -11,25 +11,25 @@
 
     <div class="w3-container">
         <p>
-In questo capitolo vedremo le liste, iniziamo come al solito a crearne una nella shell di Python:
+In questo capitolo vedremo le liste, iniziamo come al solito a crearne una nella shell:
 </p>
 <pre>
 >>> città = ['Milano', 'Napoli', 'Torino', 'Roma', 'Palermo']
 </pre>
 <p>
-Questa è la nostra lista, proviamo a stamparla e vedere di che tipo è:
+Vediamo la lista di città ed il tipo:
 </p>
 <pre>
->>> print(città)
+>>> città
 ['Milano', 'Napoli', 'Torino', 'Roma', 'Palermo']
->>> print(type(città))
+>>> type(città)
 &lt;class 'list'&gt;
 </pre>
 <p>
 Python ovviamente ci suggerisce che questa è una lista ma se osserviamo bene non è altro che una lista di stringhe. Proviamo ad accedere ai vari elementi della lista tramite l'indice, come abbiamo fatto con le stringhe, per vedere di che tipo è l'elemento "Napoli", per esempio:
 </p>
 <pre>
->>> print(type(città[1]))
+>>> type(città[1])
 &lt;class 'str'&gt;
 </pre>
 <p>
@@ -37,42 +37,42 @@ Infatti ci dice che è una stringa. Ma una lista può contenere solo stringhe?
 </p>
 <pre>
 >>> città_numeri = ['Roma', 512, 'Catania', 'Milano', -12.6, 0]
->>> print(città_numeri)
+>>> città_numeri
 ['Roma', 512, 'Catania', 'Milano', -12.6, 0]
->>> print(type(città_numeri))
+>>> type(città_numeri)
 &lt;class 'list'&gt;
 </pre>
 <p>
-Abbiamo creato un'altra lista ma stavolta contenente stringhe, numeri positivi, negativi, interi e non. Quindi una lista può contenere diversi tipi di dati. Ora vediamo se possiamo usare i metodi utilizzati in precedenza sulle stringhe anche sulle liste:
+Abbiamo creato un'altra lista ma stavolta contenente stringhe, numeri positivi, negativi, interi e non, quindi una lista può contenere diversi tipi di dati. Ora vediamo se possiamo usare i metodi utilizzati in precedenza sulle stringhe anche sulle liste:
 </p>
 <pre>
->>> print(città_numeri[2])
+>>> città_numeri[2]
 Catania
->>> print(città_numeri[-1])
+>>> città_numeri[-1]
 0
->>> print(città_numeri[3:])
+>>> città_numeri[3:]
 ['Milano', -12.6, 0]
->>> print(len(città_numeri))
+>>> len(città_numeri)
 6
 </pre>
 <p>
-Questo è un altro esempio di flessibilità di Python, abbiamo usato il metodo di affettamento sia sulle liste che sulle stringhe. A proposito di flessibilità, cosa succede se proviamo a costruire una "lista di liste"? Proviamo a crearne una di esempio su cui fare qualche prova:
+Questo è un altro esempio di flessibilità di Python, abbiamo usato il metodo di affettamento sia sulle liste che sulle stringhe. A proposito di flessibilità, cosa succede se proviamo a costruire una <i>lista di liste</i>? Proviamo a crearne una di esempio su cui fare qualche prova:
 </p>
 <pre id="shell">
->>> persona = [['Ste', 'Pinto'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
->>> print(persona)
-[['Ste', 'Pinto'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
+>>> persona = [['Mario', 'Rossi'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
+>>> persona
+[['Mario', 'Rossi'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
 </pre>
 <p>
 La lista <code>persona</code> che abbiamo appena creato contiene a sua volta delle liste, avremmo ottenuto la stessa struttura di dati dichiarandola come segue:
 </p>
 <pre>
->>> persona = [['Ste', 'Pinto'],
+>>> persona = [['Mario', 'Rossi'],
 ...            ['Corso Garibaldi, 21', 'Milano', 10100],
 ...            ['Celibe', 'Impiegato']]
 </pre>
 <p>
-Così è più facile realizzare che abbiamo appena creato una matrice, con tre righe contenenti a loro volta due o più elementi, una struttura dati di questo tipo:
+Così è più facile realizzare che abbiamo appena creato una matrice, cioè una tabella da tre righe contenenti a loro volta due o più elementi, una struttura dati di questo tipo:
 </p>
 <table class="table table-responsive-sm table-dark">
     <thead>
@@ -86,8 +86,8 @@ Così è più facile realizzare che abbiamo appena creato una matrice, con tre r
     <tbody>
     <tr>
         <td>0</td>
-        <td>Ste</td>
-        <td>Pinto</td>
+        <td>Mario</td>
+        <td>Rossi</td>
         <td></td>
     </tr>
     <tr>
@@ -108,22 +108,22 @@ Così è più facile realizzare che abbiamo appena creato una matrice, con tre r
 L'utilizzo delle matrici nei più svariati ambiti dell'informatica è massiccio, basti pensare che tutte le immagini digitali non sono altro che matrici contenenti numeri per indicare il colore di ogni pixel. Inoltre ogniqualvolta si ha a che fare con una grossa quantità di dati, al fine dell'analisi o della visualizzazione in grafi o tabelle, sarà necessario raccoglierli e organizzarli dentro a delle matrici. Ora vediamo come accedere ai vari elementi:
 </p>
 <pre>
->>> print(persona[0])
-['Ste', 'Pinto']
->>> print(persona[0:])
-[['Ste', 'Pinto'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
->>> print(persona[0][0])
-Ste
->>> print(persona[0][1])
-Pinto
->>> print(persona[1][0])
+>>> persona[0]
+['Mario', 'Rossi']
+>>> persona[0:]
+[['Mario', 'Rossi'], ['Corso Garibaldi, 21', 'Milano', 10100], ['Celibe', 'Impiegato']]
+>>> persona[0][0]
+Mario
+>>> persona[0][1]
+Rossi
+>>> persona[1][0]
 Corso Garibaldi, 21
->>> print(persona[2][1])
+>>> persona[2][1]
 Impiegato
 >>>
 </pre>
 <p>
-Prendiamo come riferimento la tabella poco sopra che rappresenta la nostra matrice e l'ultima riga, <code>print(persona[2][1])</code>, stiamo chiedendo a Python di mostrarci l'elemento della riga 2 e colonna 1. Che succede invece se richiediamo un elemento che non c'è? Proviamo!
+Prendiamo come riferimento la tabella poco sopra che rappresenta la nostra matrice e l'ultima riga, <code>persona[2][1]</code>, stiamo chiedendo a Python di mostrarci l'elemento della riga 2 e colonna 1. Che succede invece se richiediamo un elemento che non c'è? Proviamo!
 </p>
 <pre>
 >>> persona[2][3]
@@ -134,7 +134,7 @@ IndexError: list index out of range
 </pre>
 <p>
 L'ultima riga parla chiaro, Python ci dice che c'è un errore di indice e che l'indice della lista è fuori dal range.<br>
-Vedremo più avanti come gestire gli errori, per intanto si rende utile il metodo <code>len</code> che abbiamo usato prima sia sulle liste che sulle stringhe, che ci permette di accedere a tutti gli elementi senza ottenere errori di questo tipo.
+Vedremo più avanti come gestire gli errori, per intanto si rende utile il metodo <code>len()</code> che abbiamo usato prima sia sulle liste che sulle stringhe, che ci permette di accedere a tutti gli elementi senza ottenere errori di questo tipo.
 <br><br>
             <div style="text-align: center; line-height: 1.3em; font-size: 14px">
                 <a href="#">Torna a inizio pagina</a><br>

@@ -11,10 +11,10 @@
 
     <div class="w3-container">
 <pre>
-tupla = ('le', 'tuple', 'sono', 'immutabili')
+tupla = ('sono', 'una', 'tupla')
 </pre>
 <p>
-Definizione: una tupla è una lista immutabile.<br>
+<strong>Definizione:</strong> una tupla è una lista immutabile.<br><br>
 Le tuple hanno molti contesti di utilizzo, in primo luogo sono più veloci delle liste. Inoltre è buona norma usarle quando abbiamo la certezza che i nostri dati non devono cambiare in quanto, essendo immutabili, non potremo modificarle nemmeno per sbaglio.<br>
 Vediamo ora come funzionano:
 </p>
@@ -28,7 +28,7 @@ Vediamo ora come funzionano:
 ('tuple', 'sono', 'immutabili')
 </pre>
 <p>
-Come vediamo, i metodi di affettamento e indicizzazione funzionano anche con le tuple. Proviamo ora a modificare la nostra tupla:
+Come vediamo, i metodi di affettamento e indicizzazione funzionano anche con le tuple. Proviamo ora a modificarla:
 </p>
 <pre>
 >>> tupla[0] = 'non possono essere modificate!'
@@ -46,26 +46,17 @@ Proviamo a modificarla in maniera diversa:
 ('prova', 'modifica')
 </pre>
 <p>
-Può sembrare che abbiamo modificato la nostra tupla ma se osserviamo bene in realtà non è rimasta traccia della tupla precedente <code>('le', 'tuple', 'sono', 'immutabili')</code>. In realtà ne abbiamo creata una nuova, andando a sovrascrivere la precedente. Grazie al metodo <code>id()</code> possiamo verificare quale parte della memoria occupa sul nostro computer la tupla:
+Può sembrare che abbiamo modificato la nostra tupla ma se osserviamo bene in realtà non è rimasta
+traccia della precedente <code>('le', 'tuple', 'sono', 'immutabili')</code>.
+In realtà ne abbiamo creata una nuova, andando a sovrascrivere la precedente.
+<br>
+Nel prossimo capitolo vedremo gli operatori logici.
 </p>
-<pre>
->>> id(tupla)
-9531640
-</pre>
-<p>
-Ora proviamo a sovrascriverla come prima e vedere se occupa la stessa posizione di memoria o una nuova:
-</p>
-<pre>
->>> tupla = ('nuova', 'tupla')
->>> id(tupla)
-19540688
-</pre>
-<p>
-Abbiamo dimostrato che è stata creata una nuova tupla in quanto occupa una posizione diversa in memoria.
 <br><br>
     <div style="text-align: center; line-height: 1.3em; font-size: 14px">
         <a href="#">Torna a inizio pagina</a><br>
         <a href="{% url 'python_liste' %}">Capitolo precedente: Liste</a><br>
+        <a href="{% url 'python_operatori' %}">Capitolo successivo: Operatori</a><br>
     </div>
 </p>
 </div>

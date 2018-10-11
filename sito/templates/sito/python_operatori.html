@@ -1,0 +1,82 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:165px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Operatori</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+<p>Ora che abbiamo trattato alcuni tipi di dati in Python, vediamo come funzionano gli operatori più importanti:</p>
+<pre>
+>>> 4 + 3    # addizione
+7
+>>> 4 - 3    # sottrazione
+1
+>>> 4 * 3    # moltiplicazione
+12
+>>> 4 / 3    # divisione
+1.3333333333333333
+>>> 4 // 3    # restituisce il resto di una divisione
+1
+>>> 4.0 // 3    # come sopra ma in caso ci serva un float come risultato
+1.0
+>>> 4 ** 3    # elevamento a potenza, 4 elevato alla terza
+64
+</pre>
+<p>Vediamo anche le comparazioni:</p>
+<pre>
+>>> 4 > 3    # è maggiore?
+True
+>>> 4 >= 3    # è maggiore o uguale?
+True
+>>> 4 < 3    # è minore?
+False
+>>> 4 <= 3    # è minore o uguale?
+False
+>>> 4 == 3    # è uguale?
+False
+>>> 4 != 3    # è diverso?
+True
+</pre>
+<p>Ovviamente grazie alla proverbiale flessibilità di Python possiamo provare alcuni di questi operatori con altri tipi di dati, ad esempio stringhe piuttosto che liste, vediamo:</p>
+<pre>
+>>> 'ciao' + ' ' + 'mondo'    # questo metodo si chiama concatenazione
+'ciao mondo'
+>>> 'ciao ' * 5
+'ciao ciao ciao ciao ciao '
+>>> lista_1 = ['lista', 'di', 'prova']
+>>> lista_2 = ['numero', '2']
+>>> lista_1 + lista_2    # concatenazione di liste
+['lista', 'di', 'prova', 'numero', '2']
+</pre>
+<p>Python ci offre la possibilità di lavorare con gli operatori logici, vediamoli all'opera:</p>
+<pre>
+>>> 1 > 2 or 1 < 2    # 1 è maggiore di 2 OPPURE 1 è minore di 2?
+True
+>>> 1 > 2 or 2 != 2    # 1 è maggiore di 2 OPPURE 2 è diverso da 2?
+False
+>>> 1 > 2 and 1 < 2    # 1 è maggiore di 2 E 1 è minore di 2?
+False
+>>> 1 > 2 and 'b' == 'c'    # 1 è maggiore di 2 E 'b' è uguale a 'c'?
+False
+>>> 'ciao' in 'mondo'    # la parola 'ciao' è contenuta nella parola 'mondo'?
+False
+>>> 'ond' in 'mondo'
+True
+>>> 'ciao' not in 'mondo'    # la parola 'ciao' NON è contenuta nella parola 'mondo'?
+True
+</pre>
+<p>Vi invito a sperimentare questi operatori con diversi tipi di dati nella shell interattiva di Python in modo da prenderci confidenza, comunque li rincontreremo più avanti.</p>
+            <br><br>
+            <div style="text-align: center; line-height: 1.3em; font-size: 14px">
+                <a href="#">Torna a inizio pagina</a><br>
+                <a href="{% url 'python_tuple' %}">Capitolo precedente: Tuple</a><br>
+            </div>
+        </p>
+    </div>
+</div>
+{% endblock %}

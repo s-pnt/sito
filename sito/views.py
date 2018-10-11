@@ -45,6 +45,11 @@ def python_tuple(request):
                   'sito/python_tuple.html',
                   {})
 
+def python_operatori(request):
+    return render(request,
+                  'sito/python_operatori.html',
+                  {})
+
 def linux_introduzione(request):
     return render(request,
                   'sito/linux_introduzione.html',
