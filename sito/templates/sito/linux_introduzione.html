@@ -13,9 +13,9 @@
 <p>
 Ci sono diversi motivi per cui usare un sistema operativo Linux. Di seguito ne vedremo alcuni dei più importanti:
 </p>
-<div>
+<div id="introduzione">
 <p class="titolo-immagine"><strong>Sicurezza</strong></p>
-<a href="#" class="pop">
+<a href="#introduzione" class="pop">
 <img class="image-right" src="{% static 'sito/cyber_security.png' %}" align="right">
 </a>
 <p>
@@ -24,9 +24,9 @@ E' il modo migliore per evitare problemi legati a virus e malware. I programmi c
 Un'altra ragione per cui Linux può vantare un alto livello di sicurezza risiede nel fatto che è open source, significa che i sorgenti del sistema operativo sono pubblici e possono essere letti da chiunque, in questo modo negli anni si è formata un'enorme comunità da tutto il mondo che ne ha migliorato il codice, correggendone le falle.
 </p>
 </div>
-<div>
+<div id="stabilità">
 <p class="titolo-immagine"><strong>Stabilità</strong></p>
-<a href="#" class="pop">
+<a href="#stabilità" class="pop">
 <img class="image-left" src="{% static 'sito/linux_stabilità.jpg' %}" align="left">
 </a>
 <p>
@@ -37,9 +37,9 @@ Linux è un sistema operativo molto stabile, necessita raramente un riavvio e ri
     Lo stesso studio dimostra che dei 25 siti più importanti solo 2 non usano Linux e sono Live e Bing, server che appartengono a Microsoft. Ogni altro servizio, da Yahoo, Twitter ed eBay, si affida a Linux (fonte: <a href="https://www.zdnet.com/article/can-the-internet-exist-without-linux/" target="_blank">zdnet</a>).
 </p>
 </div>
-<div>
+<div id="manutenzione">
 <p class="titolo-immagine"><strong>Facilità di manutenzione</strong>
-<a href="#" class="pop">
+<a href="#manutenzione" class="pop">
 <img class="image-right" src="{% static 'sito/update_linux.jpg' %}" align="right">
 </a>
 </p>
@@ -47,9 +47,9 @@ Linux è un sistema operativo molto stabile, necessita raramente un riavvio e ri
 Mantenere Linux è semplicissimo in quanto comprende un software centrale per la gestione degli aggiornamenti relativi sia al sistema operativo che a tutti i programmi installati, nel caso fossero disponibili nuove versioni. Grazie a questo tenere il sistema aggiornato e sicuro è questione di un paio di clic ed è una procedura che può essere completamente automatizzata.
 </p>
 </div>
-<div>
+<div id="facile">
 <p class="titolo-immagine"><strong>Facilità di utilizzo</strong></p>
-<a href="#" class="pop">
+<a href="#facile" class="pop">
 <img class="image-left" src="{% static 'sito/easy_linux.png' %}" align="left">
 </a>
 <p>
@@ -60,9 +60,9 @@ I programmi più utilizzati hanno delle semplici interfacce grafiche che ci perm
 In caso usiamo programmi che funzionano solo su Windows, possiamo installare wine (Windows Emulator) ed eseguire le nostre applicazioni anche su Linux, o in alternativa installare sia Windows che Linux sul nostro computer, in dual boot, così da decidere quale sistema operativo far partire ad ogni avvio. Linux sta inoltre facendo passi avanti nel settore dei videogiochi, ora è possibile installare la famosa piattaforma Steam o il programma PlayOnLinux che ci permette di giocare ai titoli di Windows.
 </p>
 </div>
-<div>
+<div id="portabilità">
 <p class="titolo-immagine"><strong>Portabilità</strong></p>
-<a href="#" class="pop">
+<a href="#portabilità" class="pop">
 <img class="image-right" src="{% static 'sito/portability.png' %}" align="right">
 </a>
 <p>
@@ -71,9 +71,9 @@ Per portabilità in questo caso si intende la compatibilità di Linux con varie 
 Sappiamo benissimo come col passare degli anni Windows abbia richiesto computer sempre più potenti per poter girare dignitosamente ed i vecchi sistemi operativi della famiglia Windows, poniamo XP per esempio, non sono più supportati, questo significa che non vengono più rilasciati aggiornamenti legati alla sicurezza ed il sistema diventa obsoleto e vulnerabile. Questo problema non si pone con Linux perché possiamo configurarlo a tal punto da farlo girare su vecchi computer o Raspberry Pi senza sacrificare in sicurezza. Questa flessibilità ci permette una configurazione in fase di installazione al fine di avere un sistema operativo <i>pennellato</i> sui nostri componenti hardware.
 </p>
 </div>
-<div>
+<div id="personalizzazione">
 <p class="titolo-immagine"><strong>Personalizzazione</strong>
-<a href="#" class="pop">
+<a href="#personalizzazione" class="pop">
 <img class="image-left" src="{% static 'sito/linux_personalizzazione.png' %}" align="left">
 </a>
 </p>
@@ -81,9 +81,9 @@ Sappiamo benissimo come col passare degli anni Windows abbia richiesto computer 
 Linux è estremamente personalizzabile, a partire dalla scelta dei componenti da installare fino alla personalizzazione dell'interfaccia grafica. Un particolare riguardo i sistemi operativi Linux è la possibilità di scegliere quali ambienti grafici (desktop environment) installare ed utilizzare. Un desktop environment è l'interfaccia grafica che ci permette di interagire con Linux, ce ne sono di più veloci adatti anche a vecchi computer (per esempio XFCE o LXDE) o più avanzati, moderni ma esigenti in termini di risorse hardware (per esempio Gnome e KDE).
 </p>
 </div>
-<div>
+<div id="free">
 <p class="titolo-immagine"><strong>Free e open source</strong>
-<a href="#" class="pop">
+<a href="#free" class="pop">
 <img class="image-right" src="{% static 'sito/free.jpg' %}" align="right">
 </a>
 </p>
@@ -95,9 +95,9 @@ Anche la gran parte del software che è possibile installare è free, soprattutt
 Abbiamo già accennato al motivo per cui il software open source sia qualitativamente superiore e più sicuro.
 </p>
 </div>
-<div>
+<div id="supporto">
 <p class="titolo-immagine"><strong>Supporto</strong>
-<a href="#" class="pop">
+<a href="#supporto" class="pop">
 <img class="image-left" src="{% static 'sito/support.jpg' %}" align="left">
 </a>
 </p>
@@ -105,9 +105,9 @@ Abbiamo già accennato al motivo per cui il software open source sia qualitativa
 La comunità di Linux è diventata gigantesca, in particolare per le distribuzioni più famose di Linux come Ubuntu, che consiglio per chi è nuovo a questo sistema operativo. Internet brulica di forum e documentazione ed un aspetto interessante riguardo Linux è la possibilità di eseguire praticamente ogni operazione, grazie ad un comando o una serie di comandi, di conseguenza possiamo automatizzare operazioni che finora abbiamo fatto manualmente.
 </p>
 </div>
-<div>
+<div id="raspbian">
 <p class="titolo-immagine"><strong>Raspbian</strong>
-<a href="#" class="pop">
+<a href="#raspbian" class="pop">
 <img class="image-right" src="{% static 'sito/raspbian.jpg' %}" align="right">
 </a>
 </p>
