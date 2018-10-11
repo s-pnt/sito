@@ -76,12 +76,10 @@
 }
 
 .w3-container a:hover {
-    color: #4CAF50;
     color: #f2f2f2;
 }
 
 .w3-container img {
-    transition: transform .4s;
     max-width: 30vw;
     margin: 0 auto;
 }
@@ -158,19 +156,5 @@ code {
 
     .w3-container .titolo-immagine {
         text-align: center;
-    }
-}
-
-@media only screen and (min-width: 800px) {
-    .w3-container img:hover {
-        transform: scale(2.2);
-    }
-
-    .w3-container .image-right:hover {
-        padding-right: 95px;
-    }
-
-    .w3-container .image-left:hover {
-        padding-left: 95px;
     }
 }

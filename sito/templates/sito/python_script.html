@@ -1,0 +1,48 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:165px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Script Python</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p>
+Aprite il vostro editor (PyCharm, Notepad++, Sublime text o quello che preferite) e scrivete l'avanzatissimo programma che abbiamo visto nel capitolo precedente:
+</p>
+<pre>
+print('Hello, world!')
+</pre>
+<p>
+Salvatelo con estensione .py, ad esempio prova.py, questa è l'estensione che indica al sistema che il file in questione è uno script Python.
+Aprite la riga di comando e spostatevi dove avete salvato il programma, in Windows un comodo trucchetto è di tenere premuto maiuscolo e
+cliccare il tasto destro dove avete salvato il file .py, in questo modo nel menù a tendina comparirà "Apri la finestra di comando qui" che vi
+aprirà il prompt direttamente in quella cartella, altrimenti spostatevi con il comando <code>cd</code>. Ora eseguiamo il nostro programma:
+<br><br>
+<strong>Windows</strong>
+</p>
+<pre>
+python prova.py
+Hello, world!
+</pre>
+<p>
+<strong>Linux/Mac</strong>
+</p>
+<pre>
+python3 prova.py
+Hello, world!
+</pre>
+<p>
+            <br><br>
+            <div style="text-align: center; line-height: 1.3em; font-size: 14px">
+                <a href="#">Torna a inizio pagina</a><br>
+                <a href="{% url 'python_shell' %}">Capitolo precedente: Shell interattiva</a><br>
+                <a href="{% url 'python_variabili' %}">Capitolo successivo: Variabili</a>
+            </div>
+        </p>
+    </div>
+</div>
+{% endblock %}

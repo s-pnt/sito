@@ -15,6 +15,16 @@ def python_installazione(request):
                   'sito/python_installazione.html',
                   {})
 
+def python_shell(request):
+    return render(request,
+                  'sito/python_shell.html',
+                  {})
+
+def python_script(request):
+    return render(request,
+                  'sito/python_script.html',
+                  {})
+
 def python_variabili(request):
     return render(request,
                   'sito/python_variabili.html',
