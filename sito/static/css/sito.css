@@ -45,7 +45,6 @@
 }
 
 .w3-container {
-    margin-bottom: 20px;
     background-color: #333;
     color: #f2f2f2;
     text-align: justify;
@@ -141,6 +140,7 @@ code {
 
     .w3-sidebar {
         top: 8.85vw;
+        padding-bottom: 8.85vw;
     }
 
     .w3-main {
