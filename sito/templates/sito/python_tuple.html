@@ -16,7 +16,7 @@ tupla = ('sono', 'una', 'tupla')
 <p>
 <strong>Definizione:</strong> una tupla è una lista immutabile.<br><br>
 Le tuple hanno molti contesti di utilizzo, in primo luogo sono più veloci delle liste. Inoltre è buona norma usarle quando abbiamo la certezza che i nostri dati non devono cambiare in quanto, essendo immutabili, non potremo modificarle nemmeno per sbaglio.<br>
-Vediamo ora come funzionano:
+Vediamo come funzionano:
 </p>
 <pre>
 >>> tupla = ('le', 'tuple', 'sono', 'immutabili')
@@ -31,13 +31,13 @@ Vediamo ora come funzionano:
 Come vediamo, i metodi di affettamento e indicizzazione funzionano anche con le tuple. Proviamo ora a modificarla:
 </p>
 <pre>
->>> tupla[0] = 'non possono essere modificate!'
+>>> tupla[0] = 'modifica'
 Traceback (most recent call last):
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 TypeError: 'tuple' object does not support item assignment
 </pre>
 <p>
-Python è chiarissimo: la nostra <code>'tuple'</code> non può essere modificata.<br>
+Python è chiarissimo: la nostra <code>'tuple'</code> non supporta l'assegnazione, quindi non può essere modificata.<br>
 Proviamo a modificarla in maniera diversa:
 </p>
 <pre>
@@ -46,9 +46,8 @@ Proviamo a modificarla in maniera diversa:
 ('prova', 'modifica')
 </pre>
 <p>
-Può sembrare che abbiamo modificato la nostra tupla ma se osserviamo bene in realtà non è rimasta
-traccia della precedente <code>('le', 'tuple', 'sono', 'immutabili')</code>.
-In realtà ne abbiamo creata una nuova, andando a sovrascrivere la precedente.
+Può sembrare che abbiamo modificato la tupla ma se osserviamo bene in realtà non è rimasta
+traccia della precedente <code>('le', 'tuple', 'sono', 'immutabili')</code>, ne abbiamo semplicemente creata una nuova, andando a sovrascrivere la precedente.
 <br>
 Nel prossimo capitolo vedremo gli operatori logici.
 </p>

@@ -26,7 +26,7 @@ Vediamo la lista di città ed il tipo:
 &lt;class 'list'&gt;
 </pre>
 <p>
-Python ovviamente ci suggerisce che questa è una lista ma se osserviamo bene non è altro che una lista di stringhe. Proviamo ad accedere ai vari elementi della lista tramite l'indice, come abbiamo fatto con le stringhe, per vedere di che tipo è l'elemento "Napoli", per esempio:
+Python ovviamente ci suggerisce che questa è una lista ma se osserviamo bene non è altro che una lista di stringhe. Proviamo ad accedere ai vari elementi della lista tramite l'indice, come abbiamo fatto con le stringhe, per vedere di che tipo è l'elemento <code>Napoli</code>, per esempio:
 </p>
 <pre>
 >>> type(città[1])
@@ -43,7 +43,9 @@ Infatti ci dice che è una stringa. Ma una lista può contenere solo stringhe?
 &lt;class 'list'&gt;
 </pre>
 <p>
-Abbiamo creato un'altra lista ma stavolta contenente stringhe, numeri positivi, negativi, interi e non, quindi una lista può contenere diversi tipi di dati. Ora vediamo se possiamo usare i metodi utilizzati in precedenza sulle stringhe anche sulle liste:
+Abbiamo creato un'altra lista ma stavolta contenente stringhe, numeri positivi, negativi, interi e non, quindi una lista può contenere diversi tipi di dati.
+<br><br>
+<strong>Definizione:</strong> Una lista è un insieme ordinato di diversi tipi di dati. Ora vediamo se possiamo usare i metodi utilizzati in precedenza sulle stringhe anche sulle liste:
 </p>
 <pre>
 >>> città_numeri[2]
@@ -72,7 +74,7 @@ La lista <code>persona</code> che abbiamo appena creato contiene a sua volta del
 ...            ['Celibe', 'Impiegato']]
 </pre>
 <p>
-Così è più facile realizzare che abbiamo appena creato una matrice, cioè una tabella da tre righe contenenti a loro volta due o più elementi, una struttura dati di questo tipo:
+Così è più facile realizzare che abbiamo appena creato una <strong>matrice</strong>, cioè una tabella da tre righe contenenti a loro volta due o più elementi, una struttura dati di questo tipo:
 </p>
 <table class="table table-responsive-sm table-dark">
     <thead>
@@ -105,7 +107,7 @@ Così è più facile realizzare che abbiamo appena creato una matrice, cioè una
     </tbody>
 </table>
 <p>
-L'utilizzo delle matrici nei più svariati ambiti dell'informatica è massiccio, basti pensare che tutte le immagini digitali non sono altro che matrici contenenti numeri per indicare il colore di ogni pixel. Inoltre ogniqualvolta si ha a che fare con una grossa quantità di dati, al fine dell'analisi o della visualizzazione in grafi o tabelle, sarà necessario raccoglierli e organizzarli dentro a delle matrici. Ora vediamo come accedere ai vari elementi:
+L'impatto delle matrici nei più svariati ambiti dell'informatica è enorme, basti pensare che tutte le immagini digitali non sono altro che matrici contenenti numeri per indicare il colore di ogni pixel. Inoltre ogniqualvolta si ha a che fare con una grossa quantità di dati, al fine dell'analisi o della visualizzazione in grafi o tabelle, sarà necessario raccoglierli e organizzarli dentro a delle matrici. Ora vediamo come accedere ai vari elementi:
 </p>
 <pre>
 >>> persona[0]
@@ -135,6 +137,80 @@ IndexError: list index out of range
 <p>
 L'ultima riga parla chiaro, Python ci dice che c'è un errore di indice e che l'indice della lista è fuori dal range.<br>
 Vedremo più avanti come gestire gli errori, per intanto si rende utile il metodo <code>len()</code> che abbiamo usato prima sia sulle liste che sulle stringhe, che ci permette di accedere a tutti gli elementi senza ottenere errori di questo tipo.
+<br>
+Adesso vediamo alcuni importanti metodi per manipolare le liste, iniziando da <code>append()</code> che, come suggerisce la parola stessa,
+ci permette di aggiungere elementi in fondo alla lista:
+</p>
+<pre>
+>>> persona = ['Mario, 'Rossi']
+>>> persona.append('Tecnico')
+>>> persona
+['Mario', 'Rossi', 'Tecnico']
+</pre>
+<p>
+Il metodo <code>pop(i)</code> ci restituisce il valore della lista all'indice <code>i</code> dopodiché lo elimina, vediamolo all'opera
+con la lista appena creata:
+</p>
+<pre>
+>>> persona.pop(2)
+'Tecnico'
+>>> persona
+['Mario, 'Rossi']
+</pre>
+<p>
+Ha restituito <code>Tecnico</code> che era l'elemento 2 della lista e l'ha eliminato, come ci aspettavamo. Il metodo <code>pop()</code> può essere
+utilizzato senza argomenti, in questo caso restituisce ed elimina l'ultimo elemento della lista:
+</p>
+<pre>
+>>> persona.pop()
+'Rossi'
+>>> persona
+['Mario']
+</pre>
+<p>
+Il metodo <code>extend()</code> ci torna utile quando vogliamo aggiungere più elementi alla nostra lista, se utilizziamo <code>append()</code>
+come fatto in precedenza, viene creata una sottolista all'interno della lista principale e non è sempre il comportamento desiderato, facciamo
+qualche esempio per essere più chiari:
+</p>
+<pre>
+>>> lista_1 = ['Mario', 'Rossi']
+>>> lista_2 = ['Impiegato', 32]
+>>> lista_1.append(lista_2)
+>>> lista_1
+['Mario', 'Rossi', ['Impiegato', 32]]
+</pre>
+<p>
+Ora che abbiamo visto il comportamento di <code>append()</code> quando si aggiungono più elementi, vediamo invece <code>extend()</code>:
+</p>
+<pre>
+>>> lista_1 = ['Mario', 'Rossi']
+>>> lista_2 = ['Impiegato', 32]
+>>> lista_1.extend(lista_2)
+>>> lista_1
+['Mario', 'Rossi', 'Impiegato', 32]
+</pre>
+<p>
+E ancora cosa succede se usiamo semplicemente il <code>+</code>:
+</p>
+<pre>
+>>> lista_1 = ['Mario', 'Rossi']
+>>> lista_2 = ['Impiegato', 32]
+>>> lista_1 + lista_2
+['Mario', 'Rossi', 'Impiegato', 32]
+</pre>
+<p>
+Infine vediamo il metodo <code>remove()</code> che ci permette di eliminare un elemento dalla lista specificandone
+il valore:
+</p>
+<pre>
+>>> persona = ['Mario', 'Rossi', 'Impiegato']
+>>> persona.remove('Rossi')
+>>> persona
+['Mario', 'Impiegato']
+</pre>
+<p>
+Vedremo ancora i metodi delle liste affrontati fin qui, applicati su diversi tipi di dati, in particolare nel prossimo capitolo
+ci occuperemo delle tuple.
 <br><br>
             <div style="text-align: center; line-height: 1.3em; font-size: 14px">
                 <a href="#">Torna a inizio pagina</a><br>

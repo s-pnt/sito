@@ -20,7 +20,7 @@ Dichiariamo una variabile di nome <code>x</code> e assegnamole un valore di 10. 
         <p>
 <strong>Definizione:</strong> una variabile in informatica è un contenitore di dati situato in una porzione di memoria destinata a contenere valori, suscettibili di modifica nel corso dell'esecuzione di un programma. Una variabile è caratterizzata da un nome.<br>
 <br>
-E' esattamente quello che abbiamo fatto qui sopra, abbiamo scelto il nome <code>x</code> e le facciamo contenere un dato numerico.
+E' esattamente quello che abbiamo fatto qui sopra, abbiamo scelto il nome <code>x</code> e le abbiamo fatto contenere un dato numerico.
 <br>
 Vediamo la nostra <code>x</code>, fintanto che usiamo la shell interattiva non sarà necessario usare <code>print()</code>.
 </p>
@@ -29,7 +29,7 @@ Vediamo la nostra <code>x</code>, fintanto che usiamo la shell interattiva non s
 10
 </pre>
         <p>
-            Ora, per curiosità, proviamo a vedere di che tipo è la variabile x che abbiamo appena creato, noi abbiamo indicato solo un valore (10) ma non abbiamo detto a Python se fosse un intero, una stringa di testo o un altro tipo di dato. Per visualizzare il tipo di dato sarà sufficiente usare la funzione <code>type()</code> già presente in Python:
+            Ora, per curiosità, proviamo a vedere di che tipo è la variabile x che abbiamo appena creato, noi abbiamo indicato solo un valore (10) ma non abbiamo specificato se fosse un intero, una stringa di testo o un altro tipo di dato. Per visualizzare il tipo di dato sarà sufficiente usare la funzione <code>type()</code> già presente in Python:
         </p>
         <pre>
 >>> type(x)
@@ -64,13 +64,40 @@ Ci ha fregati Python, la variabile <code>x</code> è diventata un float, cioè u
 >>> x
 ciao mondo!</pre>
         <p>
-Come abbiamo creato una variabile numerica intera, l'abbiamo modificata in una di tipo testuale, vediamo di che tipo:
+Come abbiamo creato una variabile numerica, l'abbiamo modificata in una di tipo testuale, vediamo di che tipo:
         </p>
         <pre>
 >>> type(x)
 &lt;class 'str'&gt;</pre>
         <p>
-Ora è di tipo <code>'str'</code>, cioè stringa. Questa flessibilità non è una cosa comune a tutti i linguaggi di programmazione ma è un'arma a doppio taglio, da un lato ci permette di lavorare su diversi tipi di dati senza preoccuparci di scomode dichiarazioni e conversioni, dall'altro ci mette in una posizione in cui dobbiamo controllare i dati che vengono inseriti, per esempio poniamo di lavorare sul software di contabilità di un'azienda, dovremmo preoccuparci che non vengano inserite lettere o simboli quando ci aspettiamo degli importi, per evitare problemi di funzionamento del programma stesso o persino di corrompere i dati presenti nel sistema.
+Ora è di tipo <code>'str'</code>, cioè stringa. Questa flessibilità non è una cosa comune a tutti i linguaggi di programmazione
+ma è un'arma a doppio taglio, da un lato ci permette di lavorare su diversi tipi di dati senza preoccuparci di scomode dichiarazioni e
+conversioni, dall'altro ci mette in una posizione in cui dobbiamo controllare i dati che vengono inseriti, per esempio poniamo di
+lavorare sul software di contabilità di un'azienda, dovremmo preoccuparci che non vengano inserite lettere o simboli quando ci aspettiamo
+degli importi, per evitare problemi di funzionamento del programma stesso o persino di corrompere i dati presenti nel sistema.<br>
+Vediamo un ultimo tipo, si chiamano variabili booleane e possono contenere solo due valori, vero o falso:
+        </p>
+        <pre>
+>>> x = True
+>>> x
+True
+>>> type(x)
+&lt;class 'bool'&gt;
+>>> x = False
+>>> x
+False
+</pre>
+        <p>
+Proviamo qualcosa di un pò più complesso sempre con le variabili booleane, di seguito assegnamo ad <code>x</code> il risultato
+di una comparazione, nello specifico chiediamo se 12 è maggiore di 2:</p>
+        <pre>
+>>> x = 12 > 2
+>>> x
+True
+</pre>
+<p>
+Ora abbiamo una panoramica chiara del concetto di variabile e dei diversi tipi, nel prossimo capitolo vedremo approfondiremo le stringhe
+a cui abbiamo accennato poco sopra.
 <br><br>
             <div style="text-align: center; line-height: 1.3em; font-size: 14px">
                 <a href="#">Torna a inizio pagina</a><br>
