@@ -12,6 +12,7 @@ urlpatterns = [
     path('python/liste/', views.python_liste, name='python_liste'),
     path('python/tuple/', views.python_tuple, name='python_tuple'),
     path('python/operatori/', views.python_operatori, name='python_operatori'),
+    path('python/dizionari/', views.python_dizionari, name='python_dizionari'),
     path('linux/introduzione/', views.linux_introduzione, name='linux_introduzione'),
     path('linux/distribuzioni/', views.linux_distribuzioni, name='linux_distribuzioni'),
     path('raspberrypi/introduzione/', views.raspberrypi_introduzione, name='raspberrypi_introduzione'),

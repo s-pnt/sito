@@ -12,6 +12,7 @@
     <a href="{% url 'python_liste' %}" class="w3-bar-item w3-button" {% if "/python/liste/" == request.path %}id="attivo"{% endif %}>Liste</a>
     <a href="{% url 'python_tuple' %}" class="w3-bar-item w3-button" {% if "/python/tuple/" == request.path %}id="attivo"{% endif %}>Tuple</a>
     <a href="{% url 'python_operatori' %}" class="w3-bar-item w3-button" {% if "/python/operatori/" == request.path %}id="attivo"{% endif %}>Operatori</a>
+    <a href="{% url 'python_dizionari' %}" class="w3-bar-item w3-button" {% if "/python/dizionari/" == request.path %}id="attivo"{% endif %}>Dizionari</a>
 </div>
 
 {% block content%}{% endblock %}

@@ -50,6 +50,11 @@ def python_operatori(request):
                   'sito/python_operatori.html',
                   {})
 
+def python_dizionari(request):
+    return render(request,
+                  'sito/python_dizionari.html',
+                  {})
+
 def linux_introduzione(request):
     return render(request,
                   'sito/linux_introduzione.html',

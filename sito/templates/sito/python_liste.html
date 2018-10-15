@@ -107,7 +107,11 @@ Così è più facile realizzare che abbiamo appena creato una <strong>matrice</s
     </tbody>
 </table>
 <p>
-L'impatto delle matrici nei più svariati ambiti dell'informatica è enorme, basti pensare che tutte le immagini digitali non sono altro che matrici contenenti numeri per indicare il colore di ogni pixel. Inoltre ogniqualvolta si ha a che fare con una grossa quantità di dati, al fine dell'analisi o della visualizzazione in grafi o tabelle, sarà necessario raccoglierli e organizzarli dentro a delle matrici. Ora vediamo come accedere ai vari elementi:
+L'impatto delle matrici nei più svariati ambiti dell'informatica è enorme, basti pensare che tutte le
+immagini digitali non sono altro che matrici contenenti valori numerici per indicare il colore di
+ogni pixel. Inoltre ogniqualvolta si ha a che fare con una grossa quantità di dati, al fine
+dell'analisi o della visualizzazione in grafi o tabelle, sarà necessario raccoglierli e organizzarli
+dentro a matrici. Ora vediamo come accedere ai vari elementi:
 </p>
 <pre>
 >>> persona[0]
@@ -122,7 +126,6 @@ Rossi
 Corso Garibaldi, 21
 >>> persona[2][1]
 Impiegato
->>>
 </pre>
 <p>
 Prendiamo come riferimento la tabella poco sopra che rappresenta la nostra matrice e l'ultima riga, <code>persona[2][1]</code>, stiamo chiedendo a Python di mostrarci l'elemento della riga 2 e colonna 1. Che succede invece se richiediamo un elemento che non c'è? Proviamo!
@@ -132,13 +135,12 @@ Prendiamo come riferimento la tabella poco sopra che rappresenta la nostra matri
 Traceback (most recent call last):
   File "&lt;stdin&gt;", line 1, in &lt;module&gt;
 IndexError: list index out of range
->>>
 </pre>
 <p>
 L'ultima riga parla chiaro, Python ci dice che c'è un errore di indice e che l'indice della lista è fuori dal range.<br>
 Vedremo più avanti come gestire gli errori, per intanto si rende utile il metodo <code>len()</code> che abbiamo usato prima sia sulle liste che sulle stringhe, che ci permette di accedere a tutti gli elementi senza ottenere errori di questo tipo.
 <br>
-Adesso vediamo alcuni importanti metodi per manipolare le liste, iniziando da <code>append()</code> che, come suggerisce la parola stessa,
+Adesso vediamo alcuni importanti metodi per manipolare le liste, iniziando da <code>append()</code> che
 ci permette di aggiungere elementi in fondo alla lista:
 </p>
 <pre>
@@ -148,14 +150,32 @@ ci permette di aggiungere elementi in fondo alla lista:
 ['Mario', 'Rossi', 'Tecnico']
 </pre>
 <p>
-Il metodo <code>pop(i)</code> ci restituisce il valore della lista all'indice <code>i</code> dopodiché lo elimina, vediamolo all'opera
-con la lista appena creata:
+Ora il metodo <code>insert()</code>, è simile ad <code>append()</code> ma ci permette di aggiungere
+un elemento dove desideriamo, specificando la posizione. Poniamo per esempio di dover inserire il titolo
+di studio prima di nome e cognome:
+</p>
+<pre>
+>>> persona.insert(0, 'Diploma')
+>>> persona
+['Diploma', 'Mario', 'Rossi', 'Tecnico']
+</pre>
+<p>
+Abbiamo chiesto di inserire all'indice 0, quindi all'inizio, la stringa <code>Diploma</code>. E se volessimo
+inserire l'età prima del cognome?
+</p>
+<pre>
+>>> persona.insert(2, 32)
+>>> persona
+['Diploma', 'Mario', 32, 'Rossi', 'Tecnico']
+</pre>
+Passiamo al metodo <code>pop(i)</code> il quale ci restituisce l'elemento <code>i</code> della lista
+e lo elimina:
 </p>
 <pre>
 >>> persona.pop(2)
-'Tecnico'
+32
 >>> persona
-['Mario, 'Rossi']
+['Diploma', 'Mario', 'Rossi', 'Tecnico']
 </pre>
 <p>
 Ha restituito <code>Tecnico</code> che era l'elemento 2 della lista e l'ha eliminato, come ci aspettavamo. Il metodo <code>pop()</code> può essere
@@ -163,9 +183,19 @@ utilizzato senza argomenti, in questo caso restituisce ed elimina l'ultimo eleme
 </p>
 <pre>
 >>> persona.pop()
-'Rossi'
+'Tecnico'
 >>> persona
-['Mario']
+['Diploma', 'Mario', 'Rossi']
+</pre>
+<p>
+Il metodo <code>remove()</code> invece si limita ad eliminare l'elemento senza restituirlo. In questo
+caso bisogna specificare il valore da eliminare e non l'indice come con il metodo <code>pop()</code>,
+vediamo in che senso:
+</p>
+<pre>
+>>> persona.remove('Diploma')
+>>> persona
+['Mario', 'Rossi']
 </pre>
 <p>
 Il metodo <code>extend()</code> ci torna utile quando vogliamo aggiungere più elementi alla nostra lista, se utilizziamo <code>append()</code>
@@ -199,14 +229,14 @@ E ancora cosa succede se usiamo semplicemente il <code>+</code>:
 ['Mario', 'Rossi', 'Impiegato', 32]
 </pre>
 <p>
-Infine vediamo il metodo <code>remove()</code> che ci permette di eliminare un elemento dalla lista specificandone
-il valore:
+Infine il metodo <code>index()</code> ci restituisce appunto l'indice del valore richiesto, proviamo:
 </p>
 <pre>
->>> persona = ['Mario', 'Rossi', 'Impiegato']
->>> persona.remove('Rossi')
->>> persona
-['Mario', 'Impiegato']
+>>> frutta = ['arance', 'mele', 'pere', 'fragole']
+>>> frutta.index('pere')
+2
+>>> frutta[2]
+'pere'
 </pre>
 <p>
 Vedremo ancora i metodi delle liste affrontati fin qui, applicati su diversi tipi di dati, in particolare nel prossimo capitolo

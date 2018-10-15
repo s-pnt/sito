@@ -1,0 +1,240 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:165px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Dizionari</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+<p>
+I dizionari sono una struttura dati dinamica quindi possiamo modificarli e ridimensionarli in
+base alle esigenze, sono simili alle liste da questo punto di vista.
+Di seguito dichiariamo un dizionario vuoto e ne verifichiamo il tipo:
+</p>
+<pre>
+>>> rubrica = {}
+>>> type(rubrica)
+&lt;class 'dict'&gt;
+</pre>
+<p>
+Al contrario delle liste però non sono ordinati e non permettono l'accesso ai valori contenuti
+tramite un indice o posizione, ad esempio <code>lista[2]</code>, ma piuttosto vengono costruiti indicando
+delle coppie chiave-valore e quindi permettono l'accesso ai valori tramite la chiave. Di seguito
+ricostruiamo il nostro dizionario rubrica inserendo qualche numero telefonico a caso:
+</p>
+<pre>
+>>> rubrica = {'luca': 3331231231, 'renzo': 3404040404, 'lucia': 3480001112}
+>>> rubrica
+{'luca': 3331231231, 'renzo': 3404040404, 'lucia': 3480001112}
+</pre>
+<p>
+Avremmo potuto dichiararlo in maniera più leggibile, soprattutto nel caso di dizionari più
+complessi, come segue:
+</p>
+<pre>
+>>> rubrica = {'luca' : 3331231231,
+               'renzo': 3404040404,
+               'lucia': 3480001112}
+</pre>
+<p>
+Così è più facile realizzare che abbiamo creato un dizionario di coppie chiave-valore, proviamo
+ad accedere ai vari elementi:
+</p>
+<pre>
+>>> rubrica['renzo']
+3404040404
+>>> rubrica['lucia']
+3480001112
+</pre>
+<p>
+E cosa succede se proviamo ad accedere ad un elemento tramite l'indice, come faremmo con una
+lista?
+</p>
+<pre>
+>>> rubrica[1]
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 1
+</pre>
+<p>
+Python ci restituisce un <code>KeyError: 1</code>, cioè non trova alcun valore associato alla chiave 1.
+<br><br>
+<strong>Definizione:</strong> un dizionario è una lista non ordinata di coppie chiave-valore.
+<br><br>
+E' interessante sapere che i dizionari possono contenere liste:
+</p>
+<pre>
+>>> prova = {1: [1, 2, 3],
+             2: [2, 4, 6]}
+>>> type(prova[1])
+&lt;class 'list'&gt;
+</pre>
+<p>
+E' altrettanto vero l'opposto, cioè possiamo inserire un dizionario all'interno di una lista:
+</p>
+<pre>
+>>> lista = []
+>>> lista.append(prova)
+>>> lista
+[{1: [1, 2, 3], 2: [2, 4, 6]}]
+</pre>
+<p>
+Un aspetto importante quando si ha a che fare con i dizionari è comprendere che se i valori
+possono cambiare ed essere dinamici, le chiavi devono essere immutabili, quindi riceveremo un
+errore se proviamo ad usare una lista o un dizionario come chiave:
+</p>
+<pre>
+>>> dizionario = {['lista', 'come', 'chiave']: 'esempio'}
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: unhashable type: 'list'
+</pre>
+<p>
+Ora non ci interessa entrare nei dettagli dell'errore, ci basti sapere che dietro le quinte
+Python tratta i dizionari come delle tabelle hash per gestire le associazioni chiave-valore e
+non accetta dei tipi di dati modificabili come chiavi.
+Vediamo alcuni metodi che abbiamo già usato su liste e stringhe e che in questo caso
+applicheremo sui dizionari:
+</p>
+<pre>
+>>> italiano_inglese = {'rosso' : 'red',
+...                     'verde' : 'green',
+...                     'giallo': 'yellow'}
+>>> len(italiano_inglese)
+3
+</pre>
+<p>
+Il metodo <code>len()</code> ci restituisce la lunghezza del dizionario che in questo caso contiene 3
+elementi, o meglio 3 coppie chiave-valore. Ora vediamo come eliminare un elemento:
+</p>
+<pre>
+>>> del italiano_inglese['rosso']
+>>> italiano_inglese
+{'verde': 'green', 'giallo': 'yellow'}
+</pre>
+<p>
+Inoltre i dizionari ci permettono di conoscere se contengono o meno un elemento grazie all'operatore
+<code>in</code>:
+</p>
+<pre>
+>>> 'giallo' in italiano_inglese
+True
+>>> 'verde' not in italiano_inglese
+False
+</pre>
+<p>
+E' altrettanto semplice aggiungere nuovi elementi:
+</p>
+<pre>
+>>> italiano_inglese['blu'] = 'blue'
+>>> italiano_inglese
+{'verde': 'green', 'giallo': 'yellow', 'blu': 'blue'}
+>>> italiano_inglese['rosa'] = 'pink'
+>>> italiano_inglese
+{'verde': 'green', 'giallo': 'yellow', 'blu': 'blue', 'rosa': 'pink'}
+</pre>
+<p>
+In questo capitolo abbiamo utilizzato degli esempi applicabili nel mondo reale, all'inizio
+abbiamo creato una rubrica di numeri telefonici e successivamente un dizionario italiano
+inglese, vediamo come potremmo usarlo:
+</p>
+<pre>
+>>> italiano_inglese['verde']
+'green'
+>>> italiano_inglese['rosa']
+'pink'
+</pre>
+<p>
+Con poche righe di codice ed un dizionario abbiamo realizzato un traduttore dall'italiano
+all'inglese per alcuni colori, sarebbe semplice ora popolarlo con più colori e aggiungere anche
+altre parole, nomi, verbi, articoli e altro.
+Abbiamo già visto il metodo <code>pop()</code> con le liste, vediamo come si comporta con il dizionario
+<code>italiano_inglese</code>:
+</p>
+<pre>
+>>> italiano_inglese.pop('verde')
+'green'
+>>> italiano_inglese
+{'giallo': 'yellow', 'blu': 'blue', 'rosa': 'pink'}
+</pre>
+<p>
+Come ci saremmo potuti aspettare, Python ci ha restituito il valore corrispondente alla chiave
+<code>verde</code> e ha eliminato la coppia chiave-valore.
+Copiare un dizionario è semplicissimo con il metodo <code>copy()</code>:
+</p>
+<pre>
+>>> dizionario = {1: 'a', 2: 'b', 3: 'c'}
+>>> copia_dizionario = dizionario.copy()
+>>> copia_dizionario
+{1: 'a', 2: 'b', 3: 'c'}
+</pre>
+<p>
+Ora aggiungiamo un elemento alla copia del dizionario per verificare che l'originale resti
+invariato:
+</p>
+<pre>
+>>> copia_dizionario[4] = 'd'
+>>> copia_dizionario
+{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+>>> dizionario
+{1: 'a', 2: 'b', 3: 'c'}
+</pre>
+<p>
+Vediamo anche come unire due dizionari grazie al metodo <code>update()</code>:
+</p>
+<pre>
+>>> città_1 = {'Roma'   : 3000000,
+...            'Milano' : 1500000,
+...            'Torino' :  900000}
+>>> città_2 = {'Venezia':  250000,
+...            'Napoli' : 1000000}
+>>> città_1.update(città_2)
+>>> città_1
+{'Roma': 3000000, 'Milano': 1500000, 'Torino': 900000, 'Venezia': 250000, 'Napoli': 1000000}
+</pre>
+<p>
+Un altro metodo importante è <code>items()</code>, vediamo a cosa serve:
+</p>
+<pre>
+>>> città_1.items()
+dict_items([('Roma', 3000000), ('Milano', 1500000), ('Torino', 900000), ('Venezia', 250000),
+('Napoli', 1000000)])
+</pre>
+<p>
+Come suggerisce il nome del metodo, <code>items()</code> restituisce tutti gli elementi del dizionario
+in una lista di tuple contenenti le coppie chiave-valore, in questo modo è facile convertirlo in una
+lista:
+</p>
+<pre>
+>>> lista_città = list(città_1.items())
+>>> lista_città
+[('Roma', 3000000), ('Milano', 1500000), ('Torino', 900000), ('Venezia', 250000), ('Napoli',
+1000000)]
+>>> type(lista_città)
+&lt;class 'list'&gt;
+</pre>
+<p>
+Infine vediamo i metodi <code>keys()</code> e <code>values()</code> che restituiscono
+rispettivamente le chiavi e i valori del dizionario:
+</p>
+<pre>
+>>> città_1.keys()
+dict_keys(['Roma', 'Milano', 'Torino', 'Venezia', 'Napoli'])
+>>> città_1.values()
+dict_values([3000000, 1500000, 900000, 250000, 1000000])
+</pre>
+<p>
+<br><br>
+            <div style="text-align: center; line-height: 1.3em; font-size: 14px">
+                <a href="#">Torna a inizio pagina</a><br>
+                <a href="{% url 'python_operatori' %}">Capitolo precedente: Operatori</a><br>
+            </div>
+        </p>
+
+    </div>
+</div>
+{% endblock %}
