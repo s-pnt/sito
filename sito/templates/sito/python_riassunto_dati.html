@@ -1,0 +1,77 @@
+{% extends 'sito/python_sidebar.html' %}
+
+{% block content %}
+<div class="w3-main" style="margin-left:165px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Riassunto tipi di dati</h1>
+        </div>
+    </div>
+
+    <div class="w3-container">
+        <p>
+<pre>
+# VARIABILI
+
+numero   = 10          # int   - numero intero
+numero   = 3.4         # float - numero a virgola mobile
+testo    = 'ciao!'     # str   - stringa
+eseguito = True        # bool  - variabile booleana (True / False)
+
+# STRINGHE
+
+parola   = 'Python'    # str   - stringa
+parola[i]              # indicizzazione / indexing - accesso all'elemento i della stringa parola
+parola[1:3]            # affettamento / slicing    - accesso agli elementi da 1 a 3
+len(parola)            # metodo lunghezza applicato sulla stringa
+parola + 'ciao!'       # concatenazione di stringhe
+
+# LISTE
+
+numeri = [1, 2, 3]     # dichiarazione lista tramite parentesi quadre
+numeri = list((1,2,3)) # dichiarazione lista tramite metodo list() il quale si aspetta una tupla
+                       # per questo la necessità di usare le doppie parentesi tonde
+numeri = list((1,))    # dichiarazione lista con singolo elemento tramite metodo list()
+                       # la virgola dopo l'1 indica a Python che quel dato è una tupla
+numeri.append(4)       # metodo append(), aggiunge un elemento alla fine della lista
+numeri + [4]           # come il metodo append() sopra
+numeri.insert(i, 4)    # metodo insert(), inserisce il valore 4 alla posizione i
+numeri.pop(i)          # metodo pop(), restituisce ed elimina l'elemento alla posizione i
+numeri.remove(3)       # metodo remove(), rimuove il VALORE 3, non alla posizione 3
+numeri.extend([5,6])   # metodo extend(), aggiunge più elementi senza creare una sottolista
+numeri.index(5)        # metodo index(), restituisce l'indice del valore 5
+
+# TUPLE
+
+numeri = (1, 2, 3)     # dichiarazione tupla
+numeri = (1,)          # dichiarazione tupla con singolo elemento, necessaria la virgola
+numeri[-1]             # indicizzazione
+numeri[1:2]            # affettamento
+
+# DIZIONARI
+
+diz = {}               # dichiarazione dizionario vuoto tramite parentesi graffe
+diz = dict()           # dichiarazione dizionario vuoto tramite metodo dict()
+diz['ciao']            # accesso al valore associato alla chiave 'ciao'
+len(diz)               # metodo lunghezza sul dizionario
+'a' in diz             # il valore 'a' è contenuto nel dizionario diz?
+'a' not in diz         # il valore 'a' NON è contenuto nel dizionario diz?
+diz['b'] = 2           # creazione coppia chiave-valore nel dizionario
+diz.pop['b']           # restituisce ed elimina l'elemento associato alla chiave 'b'
+copia_diz = diz.copy() # copia dizionario diz
+diz.update(diz_2)      # unisce dizionari diz e diz_2
+diz.items()            # restituisce tutte le coppie chiave-valore del dizionario
+diz.keys()             # restituisce le chiavi
+diz.values()           # restituisce i valori
+</pre>
+        <br><br>
+            <div style="text-align: center; line-height: 1.3em; font-size: 14px">
+                <a href="#">Torna a inizio pagina</a><br>
+                <a href="{% url 'python_insiemi' %}">Capitolo precedente: Insiemi</a><br>
+            </div>
+        </p>
+
+    </div>
+</div>
+{% endblock %}

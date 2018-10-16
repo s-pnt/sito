@@ -55,6 +55,16 @@ def python_dizionari(request):
                   'sito/python_dizionari.html',
                   {})
 
+def python_insiemi(request):
+    return render(request,
+                  'sito/python_insiemi.html',
+                  {})
+
+def python_riassunto_dati(request):
+    return render(request,
+                  'sito/python_riassunto_dati.html',
+                  {})
+
 def linux_introduzione(request):
     return render(request,
                   'sito/linux_introduzione.html',

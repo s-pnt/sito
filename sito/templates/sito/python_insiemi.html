@@ -1,0 +1,222 @@
+{% extends 'sito/python_sidebar.html' %}
+{% load static %}
+{% block content %}
+<div class="w3-main" style="margin-left:165px">
+    <div class="w3-green">
+        <button class="w3-button w3-green w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+        <div class="w3-container" id="barra-titolo">
+            <h1>Insiemi</h1>
+        </div>
+    </div>
+    <div class="w3-container">
+<div>
+<p>
+<a href="#" class="pop">
+<img class="image-right" src="{% static 'sito/python_sets.png' %}" align="right">
+</a>
+In quest'ultimo capitolo riguardo i tipi di dati tratteremo gli insiemi, dopodiché faremo un breve riassunto di tutti i tipi di dati visti finora e finalmente entreremo nel vivo della programmazione con i cicli.
+Vediamo un'immagine di esempio che rappresenta gli insiemi A e B.
+</p>
+</div>
+<p>
+Creiamo subito un insieme di prova:
+</p>
+<pre>
+>>> insieme = set('Mario Rossi')
+>>> insieme
+{'a', 'R', 'o', 'i', 's', ' ', 'r', 'M'}
+>>> type(insieme)
+&lt;class 'set'&gt;
+</pre>
+<p>
+Gli insiemi non rispettano l'ordine degli elementi e non ne permettono la duplicazione, da qui ne deduciamo la definizione.
+<br><br>
+<strong>Definizione:</strong> un insieme è una collezione non ordinata di elementi unici.
+<br><br>
+Avendo passato una stringa nell'esempio precedente (<code>'Mario Rossi'</code>), Python ha ricavato gli elementi dalle lettere che compongono la stringa passata. Avremmo ottenuto un risultato differente passando una lista:
+</p>
+<pre>
+>>> insieme = set(['Mario', 'Rossi'])
+>>> insieme
+{'Mario', 'Rossi'}
+</pre>
+<p>
+Allo stesso modo passando una tupla:
+</p>
+<pre>
+>>> insieme = set(('Mario', 'Rossi'))
+>>> insieme
+{'Mario', 'Rossi'}
+</pre>
+<p>
+Ora abbiamo definito gli insiemi come collezioni di elementi unici, proviamo a passare una lista con elementi ripetuti per vedere cosa succede:
+</p>
+<pre>
+>>> insieme = set(['Mario', 'Rossi', 'Mario'])
+>>> insieme
+{'Mario', 'Rossi'}
+</pre>
+<p>
+Ora diamo una rapida occhiata ai metodi degli insiemi, partendo da <code>add()</code> per aggiungere nuovi elementi:
+</p>
+<pre>
+>>> insieme.add('Luca')
+>>> insieme
+{'Mario', 'Luca', 'Rossi'}
+</pre>
+<p>
+Per rimuovere un elemento utilizziamo il metodo <code>discard()</code>:
+</p>
+<pre>
+>>> insieme = set(['Mario','Rossi','Luca'])
+>>> insieme
+{'Mario', 'Luca', 'Rossi'}
+>>> insieme.discard('Mario')
+>>> insieme
+{'Luca', 'Rossi'}
+</pre>
+<p>
+Se proviamo a rimuovere un elemento non esistente con <code>discard()</code> non otteniamo errori:
+</p>
+<pre>
+>>> insieme.discard('Maria')
+>>>
+</pre>
+<p>
+Possiamo utilizzare anche il metodo <code>remove()</code> per rimuovere un elemento ma al contrario
+di <code>discard()</code> in questo caso otterremo un errore se proviamo ad eliminare un elemento
+non esistente:
+</p>
+<pre>
+>>> insieme
+{'Luca', 'Rossi'}
+>>> insieme.remove('Rossi')
+>>> insieme
+{'Luca'}
+>>> insieme.remove('Marco')
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+KeyError: 'Marco'
+</pre>
+<p>
+Per svuotare un insieme usiamo il metodo <code>clear()</code>:
+</p>
+<pre>
+>>> insieme.clear()
+>>> insieme
+set()
+</pre>
+<p>
+Per copiare un insieme è sufficiente usare <code>copy()</code>, in questo esempio dichiariamo
+l'insieme in maniera diversa, non utilizzando <code>set()</code> ma con le parentesi graffe:
+</p>
+<pre>
+>>> colori = {'giallo', 'rosso', 'verde', 'blu'}
+>>> type(colori)
+&lt;class 'set'&gt;
+>>> copia_colori = colori.copy()
+{'giallo', 'blu', 'rosso', 'verde'}
+</pre>
+<p>
+Il metodo <code>difference()</code> restituisce un insieme contenente gli elementi differenti tra due
+o più insiemi:
+</p>
+<pre>
+>>> numeri_1 = {1, 3, 5}
+>>> numeri_2 = {1, 2, 3}
+>>> numeri_3 = {2, 3, 4}
+>>> numeri_1.difference(numeri_2)
+{5}
+>>> numeri_1.difference(numeri_3)
+{1, 5}
+>>> numeri_1.difference(numeri_2).difference(numeri_3)
+{5}
+</pre>
+<p>
+Otteniamo lo stesso risultato con l'operatore <code>-</code>:
+</p>
+<pre>
+>>> numeri_1 - numeri_3
+{1, 5}
+>>> numeri_1 - numeri_2 - numeri_3
+{5}
+</pre>
+<p>
+Il metodo <code>union()</code> invece restituisce l'unione di due insiemi, ossia tutti gli elementi
+presenti negli insiemi:
+</p>
+<pre>
+>>> numeri_1.union(numeri_2)
+{1, 2, 3, 5}
+</pre>
+<p>
+Come abbiamo abbreviato il metodo <code>difference()</code> con l'operatore <code>-</code>, possiamo
+abbreviare <code>union()</code> con l'operatore pipe, il simbolo <code>|</code>:
+</p>
+<pre>
+>>> numeri_1 | numeri_2
+{1, 2, 3, 5}
+</pre>
+<p>
+Possiamo ottenere gli elementi dell'intersezione di due insiemi con il metodo <code>intersection()</code>,
+ossia gli elementi presenti sia in uno che nell'altro insieme:
+</p>
+<pre>
+>>> numeri_1.intersection(numeri_2)
+{1, 3}
+</pre>
+<p>
+Ed abbreviare il metodo <code>intersection()</code> con l'operatore <code>&</code>:
+</p>
+<pre>
+>>> numeri_1 & numeri_2
+{1, 3}
+</pre>
+<p>
+Finora abbiamo visto come gestire gli insiemi, modificarli, aggiungere o eliminare elementi,
+adesso vediamo gli insiemi immutabili (<code>frozensets</code>), ossia degli insiemi che non
+permettono modifiche:
+</p>
+<pre>
+>>> colori = frozenset(['giallo', 'blu', 'verde'])
+>>> type(colori)
+&lt;class 'frozenset'&gt;
+>>> colori.add('rosso')
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+AttributeError: 'frozenset' object has no attribute 'add'
+</pre>
+<p>
+I frozenset non possono essere modificati e Python ci suggerisce che l'oggetto <code>'frozenset'</code>
+non ha l'attributo <code>'add'</code> che gli permette di aggiungere elementi.
+        <br><br>
+            <div style="text-align: center; line-height: 1.3em; font-size: 14px">
+                <a href="#">Torna a inizio pagina</a><br>
+                <a href="{% url 'python_dizionari' %}">Capitolo precedente: Dizionari</a><br>
+                <a href="{% url 'python_riassunto_dati' %}">Capitolo successivo: Riassunto tipi di dati</a>
+            </div>
+        </pre>
+
+    </div>
+</div>
+
+<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Chiudi</span></button>
+        <img src="" class="imagepreview" style="width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function() {
+          $('.pop').on('click', function() {
+              $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+              $('#imagemodal').modal('show');
+          });
+  });
+</script>
+{% endblock %}
