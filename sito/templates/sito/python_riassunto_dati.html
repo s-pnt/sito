@@ -12,6 +12,7 @@
     <div class="w3-container">
         <p>
 <pre>
+
 # VARIABILI
 
 numero   = 10          # int   - numero intero
@@ -64,6 +65,23 @@ diz.update(diz_2)      # unisce dizionari diz e diz_2
 diz.items()            # restituisce tutte le coppie chiave-valore del dizionario
 diz.keys()             # restituisce le chiavi
 diz.values()           # restituisce i valori
+
+# INSIEMI
+
+ins = set(('a','b'))   # dichiarazione insieme tramite metodo set()
+ins = {'a','b'}        # dichiarazione insieme tramite parentesi graffe
+ins.add('c')           # aggiunta elemento 'c'
+ins.discard('c')       # rimozione elemento 'c'
+ins.remove('c')        # rimozione elemento 'c'
+ins.clear()            # svuota l'insieme
+ins1.difference(ins2)  # restituisce gli elementi differenti
+ins1 - ins2            # restituisce gli elementi differenti
+ins1.union(ins2)       # restituisce tutti gli elementi
+ins1 | ins2            # restituisce tutti gli elementi
+ins1.intersection(ins2)# restituisce gli elementi presenti sia in uno che nell'altro insieme
+ins1 & ins2            # restituisce gli elementi presenti sia in uno che nell'altro insieme
+ins=frozenset('a','b') # dichiarazione insieme immutabile
+
 </pre>
         <br><br>
             <div style="text-align: center; line-height: 1.3em; font-size: 14px">
